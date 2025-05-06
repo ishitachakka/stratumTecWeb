@@ -1,0 +1,2 @@
+# stratumTechWeb
+Stratum Technologies Website
