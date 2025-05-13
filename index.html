@@ -7,10 +7,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="/Users/ishitachakkalakkal/Downloads/goldCorridor.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Navbar -->
   <header class="navbar">
-    <h1>StratumTec</h1>
+    <a href="index.html" class="logo">StratumTec</a>
     <nav>
-      <a href="index.html">Home</a>
       <a href="company.html">Company</a>
       <a href="products.html">Products</a>
       <div class="dropdown">
@@ -21,10 +27,10 @@
           <a href="devops-and-integration.html">DevOps & Integration</a>
         </div>
       </div>
-      <a href="#contact">Contact</a>
     </nav>
   </header>  
 
+  <!-- Main Content -->
   <section id="about">
     <h2>About Us</h2>
     <p>We provide top-notch tech solutions for modern businesses.</p>
@@ -39,8 +45,9 @@
     </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Contact us at info@yourcompany.com</p>
+    <p>Contact us at sales@stratumtechnology.com</p>
   </footer>
 
   <script src="script.js"></script>

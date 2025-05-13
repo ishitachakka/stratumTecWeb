@@ -1,16 +1,44 @@
+/* Base Reset & Typography */
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  color: #111;
 }
 
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.85; /* Optional transparency */
+}
+
+/* Navbar Styles */
 .navbar {
-  background-color: #003366;
+  background-color: rgba(0, 51, 102, 0.9); /* Slightly transparent over video */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar nav {
@@ -29,6 +57,7 @@ body {
   cursor: pointer;
 }
 
+/* Dropdown Styles */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -59,23 +88,32 @@ body {
   display: block;
 }
 
+/* Hero Section */
 .hero {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent over video */
+  z-index: 1;
+  position: relative;
 }
 
+/* Company Sections */
 .company-section {
   padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .company-section section {
   margin-bottom: 2rem;
 }
 
+/* Footer */
 footer {
   background-color: #003366;
   color: white;
   text-align: center;
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
