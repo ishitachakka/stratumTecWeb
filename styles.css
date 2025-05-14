@@ -1,11 +1,10 @@
 /* Base Reset & Typography */
 body {
   margin: 0;
-  padding: 0;
+  padding-top: 4rem; /* gives breathing room from top */
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #111;
 }
 
 /* Background Video */
@@ -61,6 +60,10 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  min-width: 220px;
+  padding: 0.5rem 0;
+  right: 0;
+  left: auto;
 }
 
 .dropdown-content {
@@ -99,9 +102,11 @@ body {
 
 /* Company Sections */
 .company-section {
-  padding: 2rem;
   position: relative;
   z-index: 1;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 1000px;
 }
 
 .company-section section {
@@ -114,6 +119,6 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  position: relative;
+  position: bottom;
   z-index: 1;
 }
