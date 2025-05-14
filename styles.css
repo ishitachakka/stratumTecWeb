@@ -1,13 +1,13 @@
 /* Base Reset & Typography */
 body {
   margin: 0;
-  padding-top: 4rem; /* gives breathing room from top */
-  overflow-x: hidden;
+  padding: 0;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: white;
 }
 
-/* Background Video */
 #bg-video {
   position: fixed;
   top: 0;
@@ -18,61 +18,59 @@ body {
   height: auto;
   z-index: -1;
   object-fit: cover;
-  opacity: 0.85; /* Optional transparency */
+  opacity: 0.85;
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
-  background-color: rgba(0, 51, 102, 0.9); /* Slightly transparent over video */
+  background-color: rgba(0, 51, 102, 0.95);
   color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 3rem;
   padding: 1rem 2rem;
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navbar .logo {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
+  margin-right: 2rem;
 }
 
 .navbar nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .navbar nav a,
 .dropbtn {
   color: white;
-  text-decoration: none;
   background: none;
   border: none;
+  text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
 }
 
-/* Dropdown Styles */
+/* Dropdown */
 .dropdown {
   position: relative;
-  display: inline-block;
-  min-width: 220px;
-  padding: 0.5rem 0;
-  right: 0;
-  left: auto;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  right: 0;
   background-color: white;
   color: black;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
@@ -91,26 +89,12 @@ body {
   display: block;
 }
 
-/* Hero Section */
-.hero {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent over video */
-  z-index: 1;
-  position: relative;
-}
-
-/* Company Sections */
-.company-section {
-  position: relative;
-  z-index: 1;
-  margin: 4rem auto;
+/* Content Sections */
+main.section,
+section {
+  margin: 3rem auto;
   padding: 0 2rem;
   max-width: 1000px;
-}
-
-.company-section section {
-  margin-bottom: 2rem;
 }
 
 /* Footer */
@@ -119,6 +103,8 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  position: bottom;
-  z-index: 1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 4rem;
 }
