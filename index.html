@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" http-equiv="X-UA-Compatible" content="IE-edge"
     content="width=device-width, initial-scale=1.0" />
   <title>StratumTec</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body class="page-wrapper">
   <!-- Navbar -->
   <header class="navbar">
@@ -33,17 +30,13 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Video Background -->
-  <header class="hero">
-    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/tealTech.mp4" type="video/mp4" />
+  <!-- Video Banner -->
+  <div class="video-banner">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="assets/tealTech.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="hero-overlay" data-aos="fade-down">
-      <h1 class="hero-logo">StratumTec</h1>
-      <p class="hero-slogan">Where Innovation Means Excellence</p>
-    </div>
-  </header>
+  </div>
 
   <!-- Main Content -->
   <main class="section">
@@ -54,77 +47,39 @@
         combine deep technical expertise with personalized service to ensure lasting success for our clients.</p>
     </div>
 
-    <!-- Expertise Section (Cards) -->
-    <section class="expertise-section">
-      <div class="container-cards">
-        <div class="expertise-card" data-aos="fade-up">
-          <h3>Product Development</h3>
-          <p>From strategy to execution, we build custom software tailored to your business needs, ensuring scalability and performance.</p>
-          <a href="product-development.html">Learn More</a>
-        </div>
-        <div class="expertise-card" data-aos="fade-up">
-          <h3>Cloud Solutions</h3>
-          <p>Leverage secure, scalable cloud infrastructure to boost performance, cut costs, and streamline access anytime, anywhere.</p>
-          <a href="cloud-solutions.html">Learn More</a>
-        </div>
-        <div class="expertise-card" data-aos="fade-up">
-          <h3>DevOps & Integrations</h3>
-          <p>Accelerate development and automate deployments through our seamless DevOps practices and systems integration expertise.</p>
-          <a href="devops-and-integration.html">Learn More</a>
-        </div>
-      </div>
-    </section>
+    <div>
+      <h2>What We Offer</h2>
+      <ul>
+        <h2>Cloud Consulting</h2>
+        <p>Scale without limits using our secure, reliable cloud services. From infrastructure migration to hybrid
+          deployments, we help you reduce overhead while improving performance and accessibility.</p>
+        <h2>DevOps and Integration</h2>
+        <p>Streamline operations with continuous integration, deployment automation, and robust system testing. Our
+          DevOps services are built for agility, speed, and collaboration.</p>
+        <h2>VoIP Solutions</h2>
+        <p>Modernize communication with our VoIP services, enabling crystal-clear voice connectivity, flexible
+          collaboration tools, and scalable infrastructure for growing businesses.</p>
+        <h2>AI & Data Analytics</h2>
+        <p>Unlock valuable insights with AI-powered analytics designed to enhance decision-making, automate workflows,
+          and uncover growth opportunities. Our solutions empower you to make data-driven decisions faster and smarter.</p>
+        <h2>Product Development</h2>
+        <p>From strategy to execution, we help define your IT roadmap and build high-quality, custom software solutions
+          designed around your business. Our development services are agile, reliable, and built to scale.</p>
+        <h2>IoT Development</h2>
+        <p>Harness the power of connected devices with our end-to-end IoT solutions, including hardware integration,
+          software development, and cloud-based management tools tailored to your industry.</p>
+      </ul>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <!-- Left: Logo and Description -->
-    <div class="footer-left">
-      <h2>StratumTec</h2>
-      <p>StratumTec delivers innovative, enterprise-grade IT solutions globally through a skilled team and trusted partners. We specialize in reducing development costs and increasing profitability by offering tailored software services, scalable cloud solutions, and modern platforms like NCS for communication and Blue Mesh for secure AI integration. Our suite of offerings spans product development, DevOps, IoT, and IT consulting — all designed to help businesses grow smarter and faster. With a client-first approach, worldwide reach, and time zone flexibility, StratumTec ensures reliability, agility, and strategic impact at every step.</p>
-    </div>
-
-    <!-- Right: Link Columns -->
-    <div class="footer-right">
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Expertise</h3>
-        <ul>
-          <li><a href="#">Cloud Solutions</a></li>
-          <li><a href="#">DevOps & Integrations</a></li>
-          <li><a href="#">Product Development</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="#">NCS</a></li>
-          <li><a href="#">Bluemesh</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
+  <footer>
+    <h2>Contact Us</h2>
+    <p>Talk to our experts to discuss how we can help drive your organization's success with our comprehensive,
+      strategic approach. Experience the transformative power of StratumTec's industry-leading solutions.</p>
+    <p>Reach us at sales@stratumtec.com</p>
   </footer>
 
   <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
-
 </html>
