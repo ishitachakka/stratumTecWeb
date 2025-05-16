@@ -33,13 +33,17 @@
     </nav>
   </header>
 
-  <!-- Video Banner -->
-  <div class="video-banner">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="assets/tealTech.mp4" type="video/mp4">
+  <!-- Hero Section with Video Background -->
+  <header class="hero">
+    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/tealTech.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-  </div>
+    <div class="hero-overlay" data-aos="fade-down">
+      <h1 class="hero-logo">StratumTec</h1>
+      <p class="hero-slogan">Where Innovation Means Excellence</p>
+    </div>
+  </header>
 
   <!-- Main Content -->
   <main class="section">
@@ -50,23 +54,25 @@
         combine deep technical expertise with personalized service to ensure lasting success for our clients.</p>
     </div>
 
-    <!-- Expertise Sections -->
-    <section class="service-section" data-aos="fade-up">
-      <h2>Product Development</h2>
-      <p>From strategy to execution, we build custom software tailored to your business needs, ensuring scalability and performance.</p>
-      <a href="product-development.html" class="learn-more-btn">Learn More</a>
-    </section>
-
-    <section class="service-section" data-aos="fade-up" data-aos-delay="150">
-      <h2>Cloud Solutions</h2>
-      <p>Leverage secure, scalable cloud infrastructure to boost performance, cut costs, and streamline access anytime, anywhere.</p>
-      <a href="cloud-solutions.html" class="learn-more-btn">Learn More</a>
-    </section>
-
-    <section class="service-section" data-aos="fade-up" data-aos-delay="300">
-      <h2>DevOps & Integrations</h2>
-      <p>Accelerate development and automate deployments through our seamless DevOps practices and systems integration expertise.</p>
-      <a href="devops-and-integration.html" class="learn-more-btn">Learn More</a>
+    <!-- Expertise Section (Cards) -->
+    <section class="expertise-section">
+      <div class="container-cards">
+        <div class="expertise-card" data-aos="fade-up">
+          <h3>Product Development</h3>
+          <p>From strategy to execution, we build custom software tailored to your business needs, ensuring scalability and performance.</p>
+          <a href="product-development.html">Learn More</a>
+        </div>
+        <div class="expertise-card" data-aos="fade-up">
+          <h3>Cloud Solutions</h3>
+          <p>Leverage secure, scalable cloud infrastructure to boost performance, cut costs, and streamline access anytime, anywhere.</p>
+          <a href="cloud-solutions.html">Learn More</a>
+        </div>
+        <div class="expertise-card" data-aos="fade-up">
+          <h3>DevOps & Integrations</h3>
+          <p>Accelerate development and automate deployments through our seamless DevOps practices and systems integration expertise.</p>
+          <a href="devops-and-integration.html">Learn More</a>
+        </div>
+      </div>
     </section>
   </main>
 
