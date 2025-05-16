@@ -10,8 +10,8 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; 
-  word-wrap: break-word; 
+  overflow-x: hidden;
+  word-wrap: break-word;
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -124,7 +124,13 @@ body {
   text-decoration: none;
 }
 
-/* Updated Dropdown Content */
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -150,12 +156,6 @@ body {
 .dropdown-content a:hover {
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  text-align: center;
 }
 
 .dropdown:hover .dropdown-content {
@@ -375,14 +375,11 @@ main.section {
   }
 }
 
-/* ... (everything above remains unchanged) ... */
-
+/* Footer */
 .site-footer {
   background-color: #111;
   color: #fff;
   padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -408,7 +405,6 @@ main.section {
   margin: 0 auto;
   text-align: center;
 }
-
 
 .footer-right {
   display: flex;
@@ -446,13 +442,12 @@ main.section {
   text-decoration: underline;
 }
 
-/* Responsive for smaller screens */
+/* Responsive Footer */
 @media (max-width: 768px) {
   .site-footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 3rem 1.5rem;
   }
 
   .footer-left,
