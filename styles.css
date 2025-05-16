@@ -236,26 +236,29 @@ main.section {
 /* Logo + Language Icon */
 .logo-block {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  text-decoration: none;
   color: turquoise;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
 }
 
-.translate-icon {
-  width: 22px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
+.translate-link {
+  color: white;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-left: 2px;
+  transition: color 0.3s ease;
 }
 
-.translate-icon:hover {
-  transform: scale(1.05);
+.translate-link:hover {
+  color: turquoise;
+  text-decoration: underline;
 }
 
 /* Product Page Section */
@@ -375,52 +378,60 @@ main.section {
   }
 }
 
-/* Footer */
+/* Footer full-width background */
 .site-footer {
-  background-color: #111;
-  color: #fff;
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: 3rem 1rem;
+  width: 100%;
 }
 
+/* Footer inner container centered */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Left company description */
 .footer-left {
-  flex: 1 1 45%;
-  max-width: 600px;
+  flex: 2;
+  min-width: 250px;
 }
 
 .footer-left h2 {
-  color: #40E0D0;
+  color: turquoise;
   margin-bottom: 1rem;
 }
 
 .footer-left p {
-  color: #ccc;
+  font-size: 0.9rem;
   line-height: 1.6;
-  font-size: 0.95rem;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+  color: #ddd;
 }
 
+/* Right-side columns container */
 .footer-right {
+  flex: 3;
   display: flex;
-  flex: 1 1 45%;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
+/* Individual columns */
 .footer-column {
-  min-width: 120px;
+  flex: 1;
+  min-width: 140px;
 }
 
 .footer-column h3 {
-  color: #fff;
+  color: turquoise;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .footer-column ul {
@@ -429,17 +440,19 @@ main.section {
   margin: 0;
 }
 
-.footer-column li {
-  margin: 0.4rem 0;
+.footer-column ul li {
+  margin-bottom: 0.4rem;
 }
 
-.footer-column a {
-  color: #40E0D0;
+.footer-column ul li a {
+  color: white;
   text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
 }
 
-.footer-column a:hover {
-  text-decoration: underline;
+.footer-column ul li a:hover {
+  color: turquoise;
 }
 
 /* Responsive Footer */
