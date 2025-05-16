@@ -3,96 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <!-- Main site CSS (assumed to exist) -->
+  <title>StratumTec</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- AOS library CSS for scroll animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Styles for the Expertise section */
-    .expertise {
-      background-color: #000;   /* Black background */
-      color: #fff;             /* White text */
-      padding: 4rem 2rem;      /* Spacious padding for section */
-    }
-    .expertise h2 {
-      text-align: center;
-      color: #40E0D0;          /* Turquoise accent for section title */
-      margin-bottom: 2rem;
-    }
-    .container-cards {
-      display: flex;
-      flex-wrap: wrap;        /* Allow cards to wrap to new line on small screens :contentReference[oaicite:4]{index=4} */
-      justify-content: center;
-      gap: 2rem;              /* space between cards */
-    }
-    .expertise-card {
-      background-color: #111;  /* Slightly lighter black for contrast */
-      border: 1px solid #40E0D0;  /* Turquoise border accent */
-      border-radius: 8px;
-      padding: 2rem;
-      flex: 1 1 300px;        /* Flex item: grow/shrink, base width ~300px */
-      max-width: 300px;       /* Limit max width for each card */
-      text-align: left;
-    }
-    .expertise-card h3 {
-      color: #40E0D0;         /* Turquoise accent for card titles */
-      margin-bottom: 1rem;
-    }
-    .expertise-card p {
-      line-height: 1.6;
-    }
-    /* Responsive: stack cards vertically on narrow screens */
-    @media (max-width: 768px) {
-      .container-cards {
-        flex-direction: column;   /* Stack cards in one column on mobile :contentReference[oaicite:5]{index=5} */
-        align-items: center;      /* Center cards horizontally */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-  <!-- Hero Section (existing content) -->
-  <section class="hero">
-    <!-- ... existing hero content ... -->
-  </section>
+<body class="page-wrapper">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo-block">
+      <a href="index.html" class="logo">StratumTec</a>
+      <a href="#" id="translate-btn">
+        <img src="assets/por.png" alt="Translate to Portuguese" class="translate-icon" />
+      </a>
+    </div>
+    <nav>
+      <a href="products.html">Products</a>
+      <div class="dropdown">
+        <a class="dropbtn">Expertise</a>
+        <div class="dropdown-content">
+          <a href="product-development.html">Product Development</a>
+          <a href="cloud-solutions.html">Cloud Solutions</a>
+          <a href="devops-and-integration.html">DevOps & Integration</a>
+        </div>
+      </div>
+      <a href="company.html">Company</a>
+    </nav>
+  </header>
 
-  <!-- Expertise Section (Newly Added) -->
+  <!-- Hero Section with Video and Slogan -->
+  <header class="hero">
+    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/tealTech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay" data-aos="fade-down">
+      <h1 class="hero-logo">StratumTec</h1>
+      <p class="hero-slogan">Where Innovation Means Excellence</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div>
+      <h2>Your Partner in Smart IT Solutions</h2>
+      <p>At Stratum Technologies, we prioritize understanding your unique business needs and challenges. Our team of
+        experts delivers cost-effective, scalable, and tailored IT solutions that align with your operational goals. We
+        combine deep technical expertise with personalized service to ensure lasting success for our clients.</p>
+    </div>
+  </main>
+
+  <!-- Expertise Cards Section -->
   <section class="expertise">
-    <div class="container">
-      <h2>Our Expertise</h2>
-      <div class="container-cards">
-        <!-- Product Development Card -->
-        <div class="expertise-card" data-aos="fade-right">
-          <h3>Product Development</h3>
-          <p>We build robust and scalable products from concept to launch, 
-             ensuring a focus on user experience and business value.</p>
-        </div>
-        <!-- Cloud Solutions Card -->
-        <div class="expertise-card" data-aos="fade-up">
-          <h3>Cloud Solutions</h3>
-          <p>Implementing secure, efficient cloud infrastructures and services 
-             that let your business leverage the power of the cloud at scale.</p>
-        </div>
-        <!-- DevOps & Integrations Card -->
-        <div class="expertise-card" data-aos="fade-left">
-          <h3>DevOps & Integrations</h3>
-          <p>Automating workflows and integrating systems to streamline development 
-             and deployment, improving your team’s efficiency and agility.</p>
-        </div>
+    <h2>Our Expertise</h2>
+    <div class="container-cards">
+      <div class="expertise-card" data-aos="fade-right">
+        <h3>Product Development</h3>
+        <p>We build robust and scalable products from concept to launch, ensuring a focus on user experience and business value.</p>
+      </div>
+      <div class="expertise-card" data-aos="fade-up">
+        <h3>Cloud Solutions</h3>
+        <p>Implementing secure, efficient cloud infrastructures and services that let your business leverage the power of the cloud at scale.</p>
+      </div>
+      <div class="expertise-card" data-aos="fade-left">
+        <h3>DevOps & Integrations</h3>
+        <p>Automating workflows and integrating systems to streamline development and deployment, improving your team’s efficiency and agility.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer Section (existing content) -->
-  <footer>
-    <!-- ... existing footer content ... -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <h2>StratumTec</h2>
+      <p>StratumTec delivers innovative, enterprise-grade IT solutions globally through a skilled team and trusted partners. We specialize in reducing development costs and increasing profitability by offering tailored software services, scalable cloud solutions, and modern platforms like NCS for communication and Blue Mesh for secure AI integration. Our suite of offerings spans product development, DevOps, IoT, and IT consulting — all designed to help businesses grow smarter and faster. With a client-first approach, worldwide reach, and time zone flexibility, StratumTec ensures reliability, agility, and strategic impact at every step.</p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Expertise</h3>
+        <ul>
+          <li><a href="#">Cloud Solutions</a></li>
+          <li><a href="#">DevOps & Integrations</a></li>
+          <li><a href="#">Product Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">NCS</a></li>
+          <li><a href="#">Bluemesh</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
-  <!-- AOS library JS and initialization (placed before closing body) -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();  // Initialize AOS animations
+    AOS.init();
   </script>
 </body>
 </html>
