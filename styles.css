@@ -404,7 +404,11 @@ main.section {
   color: #ccc;
   line-height: 1.6;
   font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
+
 
 .footer-right {
   display: flex;
