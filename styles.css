@@ -384,7 +384,7 @@ main.section {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 3rem;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-left {
@@ -403,7 +403,7 @@ main.section {
   font-size: 0.95rem;
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-right {
