@@ -124,33 +124,23 @@ body {
   text-decoration: none;
 }
 
-.dropdown-content a {
-  color: white;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
+/* Updated Dropdown Content */
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.9);
   min-width: 220px;
-  max-width: 90vw;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  overflow-wrap: break-word;
-  padding: 0.5rem 0;
   text-align: center;
+  padding: 0.5rem 0;
 }
 
 .dropdown-content a {
+  color: white;
   padding: 12px 12px;
   display: block;
   text-decoration: none;
@@ -160,6 +150,12 @@ body {
 .dropdown-content a:hover {
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
 .dropdown:hover .dropdown-content {
@@ -311,7 +307,7 @@ main.section {
   text-decoration: underline;
 }
 
-/* === Expertise Card Section (UPDATED) === */
+/* Expertise Cards */
 .expertise {
   background-color: black;
   color: white;
@@ -379,7 +375,7 @@ main.section {
   }
 }
 
-/* === Centered Footer Layout === */
+/* Centered Footer Layout */
 .site-footer {
   background-color: #111;
   color: #fff;
@@ -391,7 +387,7 @@ main.section {
 }
 
 .footer-left {
-  max-width: 800px;
+  max-width: 900px;
   margin-bottom: 2rem;
 }
 
@@ -404,6 +400,8 @@ main.section {
   color: #ccc;
   line-height: 1.6;
   font-size: 0.95rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .footer-right {
