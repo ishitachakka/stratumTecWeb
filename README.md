@@ -1,1 +1,1 @@
-# stratumTechWeb
+# stratumTecWeb
