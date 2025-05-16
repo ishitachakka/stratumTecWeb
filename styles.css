@@ -325,3 +325,51 @@ footer {
     justify-content: center;
   }
 }
+
+.product-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.product-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.product-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.product-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-content {
+  flex: 1 1 400px;
+  color: white;
+}
+
+.product-content h3 {
+  color: turquoise;
+  margin-bottom: 0.5rem;
+}
+
+.product-content a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: turquoise;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-content a:hover {
+  text-decoration: underline;
+}
