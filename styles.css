@@ -377,11 +377,12 @@ main.section {
 
 /* ... (everything above remains unchanged) ... */
 
-/* Footer Layout */
 .site-footer {
   background-color: #111;
   color: #fff;
   padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -441,12 +442,13 @@ main.section {
   text-decoration: underline;
 }
 
-/* Responsive Footer Layout */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .site-footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 3rem 1.5rem;
   }
 
   .footer-left,
