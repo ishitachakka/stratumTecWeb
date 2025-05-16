@@ -7,6 +7,7 @@
     content="width=device-width, initial-scale=1.0" />
   <title>StratumTec</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="page-wrapper">
@@ -47,33 +48,26 @@
       <p>At Stratum Technologies, we prioritize understanding your unique business needs and challenges. Our team of
         experts delivers cost-effective, scalable, and tailored IT solutions that align with your operational goals. We
         combine deep technical expertise with personalized service to ensure lasting success for our clients.</p>
-      </div>
-
-    <div>
-      <h2>What We Offer</h2>
-      <ul>
-        <h2>Cloud Consulting</h2>
-        <p>Scale without limits using our secure, reliable cloud services. From infrastructure migration to hybrid
-          deployments, we help you reduce overhead while improving performance and accessibility.</p>
-        <h2>DevOps and Integration</h2>
-        <p>Streamline operations with continuous integration, deployment automation, and robust system testing. Our
-          DevOps
-          services are built for agility, speed, and collaboration.</p>
-        <h2>VoIP Solutions</h2>
-        <p>Modernize communication with our VoIP services, enabling crystal-clear voice connectivity, flexible
-          collaboration tools, and scalable infrastructure for growing businesses.</p>
-        <h2>AI & Data Analytics</h2>
-        <p>Unlock valuable insights with AI-powered analytics designed to enhance decision-making, automate workflows,
-          and
-          uncover growth opportunities. Our solutions empower you to make data-driven decisions faster and smarter.</p>
-        <h2>Product Development</h2>
-        <p>From strategy to execution, we help define your IT roadmap and build high-quality, custom software solutions
-          designed around your business. Our development services are agile, reliable, and built to scale.</p>
-        <h2>IoT Development</h2>
-        <p>Harness the power of connected devices with our end-to-end IoT solutions, including hardware integration,
-          software development, and cloud-based management tools tailored to your industry.</p>
-      </ul>
     </div>
+
+    <!-- Expertise Sections -->
+    <section class="service-section" data-aos="fade-up">
+      <h2>Product Development</h2>
+      <p>From strategy to execution, we build custom software tailored to your business needs, ensuring scalability and performance.</p>
+      <a href="product-development.html" class="learn-more-btn">Learn More</a>
+    </section>
+
+    <section class="service-section" data-aos="fade-up" data-aos-delay="150">
+      <h2>Cloud Solutions</h2>
+      <p>Leverage secure, scalable cloud infrastructure to boost performance, cut costs, and streamline access anytime, anywhere.</p>
+      <a href="cloud-solutions.html" class="learn-more-btn">Learn More</a>
+    </section>
+
+    <section class="service-section" data-aos="fade-up" data-aos-delay="300">
+      <h2>DevOps & Integrations</h2>
+      <p>Accelerate development and automate deployments through our seamless DevOps practices and systems integration expertise.</p>
+      <a href="devops-and-integration.html" class="learn-more-btn">Learn More</a>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -85,6 +79,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
