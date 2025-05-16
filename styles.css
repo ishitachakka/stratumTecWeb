@@ -100,8 +100,8 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;                  /* center the dropdown */
-  transform: translateX(-50%); /* pull it back by 50% of its own width */
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.9);
   min-width: 220px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -224,152 +224,67 @@ main.section {
 }
 
 /* Footer */
-footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: turquoise;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-  width: 100%;
-  overflow-x: hidden; 
-  word-wrap: break-word; 
-  max-width: 100%;
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 2rem 1rem;
 }
 
-/* -------------------------- */
-/* NEW STYLES BELOW */
-/* -------------------------- */
-
-/* HERO SECTION */
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero-overlay {
-  z-index: 1;
-  padding: 2rem;
-}
-
-.hero-logo {
-  font-size: 2.5rem;
-  color: #40E0D0;
-  margin: 0.2rem 0;
-}
-
-.hero-slogan {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #f0f0f0;
-  margin: 0.2rem 0;
-}
-
-/* EXPERTISE CARD SECTION */
-.container-cards {
+.site-footer .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
-.expertise-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 1.5rem;
-  margin: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  flex: 1 1 30%;
+.site-footer .footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.expertise-card h3 {
-  color: #40E0D0;
-  margin-top: 0;
-}
-
-.expertise-card p {
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.expertise-card a {
-  color: #40E0D0;
-  text-decoration: none;
+.site-footer .footer-col h4 {
   font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .expertise-card {
-    flex: 1 1 100%;
-    margin: 1rem 0;
-  }
-  .container-cards {
-    justify-content: center;
-  }
-}
-
-.product-section {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-}
-
-.product-box {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
-}
-
-.product-box.reverse {
-  flex-direction: row-reverse;
-}
-
-.product-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.product-content {
-  flex: 1 1 400px;
-  color: white;
-}
-
-.product-content h3 {
-  color: turquoise;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
-.product-content a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: turquoise;
-  text-decoration: none;
-  font-weight: bold;
+.site-footer .footer-col li {
+  margin: 0.3rem 0;
 }
 
-.product-content a:hover {
+.site-footer a {
+  color: #40e0d0;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
   text-decoration: underline;
+}
+
+.site-footer .footer-contact h4 {
+  font-weight: bold;
+  color: #fff;
+  margin: 1rem 0 0.5rem;
+}
+
+.site-footer .footer-contact p {
+  margin: 0 0 1rem;
+}
+
+.site-footer .footer-contact p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-columns {
+    flex-direction: column;
+  }
+  .site-footer .footer-col {
+    margin-bottom: 1.5rem;
+  }
+  .site-footer .footer-col:last-child {
+    margin-bottom: 0;
+  }
 }
