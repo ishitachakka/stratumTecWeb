@@ -93,7 +93,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 2rem;
   position: sticky;
@@ -101,17 +101,42 @@ body {
   z-index: 999;
 }
 
-.navbar .logo {
+/* Logo + Translate */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.2rem;
+}
+
+.logo {
   font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
   color: turquoise;
+  line-height: 1;
 }
 
+.translate-link {
+  color: white;
+  font-size: 0.75rem;
+  text-decoration: none;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.translate-link:hover {
+  color: turquoise;
+  text-decoration: underline;
+}
+
+/* Navbar Links */
 .navbar nav {
   display: flex;
+  align-items: flex-start;
   gap: 1.5rem;
-  align-items: center;
+  margin-top: 0.4rem;
 }
 
 .navbar nav a,
@@ -170,6 +195,7 @@ main.section {
   text-align: center;
 }
 
+/* Schedule Consultation Button */
 .consult-btn {
   display: inline-block;
   margin: 2rem auto;
@@ -231,36 +257,6 @@ main.section {
 
 .contact-form button:hover {
   background-color: #00cccc;
-}
-
-/* Logo + Language Icon */
-.logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem 2rem;
-  gap: 1.5rem;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: turquoise;
-  text-decoration: none;
-  margin-bottom: 0.2rem;
-}
-
-.translate-link {
-  color: white;
-  font-size: 0.85rem;
-  text-decoration: none;
-  margin-left: 2px;
-  transition: color 0.3s ease;
-}
-
-.translate-link:hover {
-  color: turquoise;
-  text-decoration: underline;
 }
 
 /* Product Page Section */
@@ -474,4 +470,17 @@ main.section {
   .footer-right {
     justify-content: center;
   }
+}
+
+/* Dropdown Arrow */
+.arrow {
+  font-size: 0.65rem;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Optional: rotate arrow on hover */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
 }
