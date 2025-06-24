@@ -109,12 +109,9 @@ body {
   margin-top: 0.2rem;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: turquoise;
-  line-height: 1;
+.logo-image {
+  height: 40px; 
+  cursor: pointer;
 }
 
 .translate-link {
