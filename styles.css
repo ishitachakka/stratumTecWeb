@@ -66,10 +66,9 @@ body {
   padding: 2rem;
 }
 
-.hero-logo {
-  font-size: 3rem;
-  color: #40E0D0;
-  margin: 0.2rem 0;
+.hero-image {
+  height: 100px;
+  width: 400px;
 }
 
 .hero-slogan {
@@ -90,7 +89,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.65);
   color: white;
   display: flex;
   align-items: flex-start;
@@ -99,6 +98,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  font-family: 'Sen', sans-serif;
 }
 
 /* Logo + Translate */
@@ -146,40 +146,47 @@ body {
   text-decoration: none;
 }
 
-/* Dropdown Menu */
+/* Dropdown Container */
 .dropdown {
   position: relative;
   display: inline-block;
   text-align: center;
 }
 
+/* Hidden by default, visible on hover */
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #1B1C3A; /* Navy Blue */
   min-width: 220px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   text-align: center;
   padding: 0.5rem 0;
+  border-radius: 4px;
 }
 
+/* Dropdown Links */
 .dropdown-content a {
   color: white;
   padding: 12px 12px;
   display: block;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
 }
 
+/* Hover Effect */
 .dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: black;
+  background-color: #f26b27; /* Orange hover */
+  color: white;
 }
 
+/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
