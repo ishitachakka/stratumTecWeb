@@ -110,12 +110,12 @@ body {
 }
 
 .logo-image {
-  height: 40px; 
+  height: 60px; 
   cursor: pointer;
 }
 
 .translate-link {
-  color: white;
+  color: #28265B;
   font-size: 0.75rem;
   text-decoration: none;
   margin-top: 0.2rem;
@@ -124,7 +124,7 @@ body {
 }
 
 .translate-link:hover {
-  color: turquoise;
+  color: #EC7C2D;
   text-decoration: underline;
 }
 
@@ -142,7 +142,7 @@ body {
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  color: turquoise;
+  color: #28265B;
   text-decoration: none;
 }
 
