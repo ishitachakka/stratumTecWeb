@@ -89,16 +89,13 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.65);
-  color: white;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  font-family: 'Sen', sans-serif;
+  background-color: white;
+  position: relative;
+  z-index: 10;
 }
 
 /* Logo + Translate */
@@ -146,49 +143,70 @@ body {
   text-decoration: none;
 }
 
-/* Dropdown Container */
+/* Dropdown Setup */
 .dropdown {
   position: relative;
   display: inline-block;
-  text-align: center;
 }
 
-/* Hidden by default, visible on hover */
-.dropdown-content {
+.dropbtn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+/* ▼ Arrow Animation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg); /* ▲ */
+}
+
+/* Mega Dropdown Panel */
+.mega-dropdown {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #1B1C3A; /* Navy Blue */
-  min-width: 220px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  text-align: center;
-  padding: 0.5rem 0;
-  border-radius: 4px;
+  left: 0;
+  width: 100vw;
+  background-color: #0c1a2e; /* Navy */
+  color: white;
+  padding: 1rem 3rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
-/* Dropdown Links */
-.dropdown-content a {
+/* Show on hover */
+.dropdown:hover .mega-dropdown {
+  display: flex;
+}
+
+/* Dropdown links */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-column a {
   color: white;
-  padding: 12px 12px;
-  display: block;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  font-family: 'Sen', sans-serif;
-  font-weight: 400;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hover Effect */
-.dropdown-content a:hover {
-  background-color: #f26b27; /* Orange hover */
-  color: white;
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown-column a:hover {
+  color: black;
+  background-color: #f97316; /* Orange hover */
+  padding-left: 0.25rem;
 }
 
 /* Content Sections */
@@ -474,17 +492,4 @@ main.section {
   .footer-right {
     justify-content: center;
   }
-}
-
-/* Dropdown Arrow */
-.arrow {
-  font-size: 0.65rem;
-  margin-left: 4px;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-/* Optional: rotate arrow on hover */
-.dropdown:hover .arrow {
-  transform: rotate(180deg);
 }
