@@ -87,15 +87,32 @@ body {
 }
 
 /* Navbar Links */
-.navbar nav a,
+nav a,
 .dropbtn {
+  text-decoration: none;
+  color: #28265B;
+  font-size: 0.95rem;
+  font-weight: 400;
   background: none;
   border: none;
-  font-size: 1rem;
   cursor: pointer;
-  color: #28265B;
-  text-decoration: none;
-  font-weight: normal; 
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.4rem;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.6rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Sen', sans-serif;
+  position: relative;
+  z-index: 10;
 }
 
 /* Logo + Translate */
@@ -103,7 +120,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 0.2rem;
 }
 
 .logo-image {
@@ -136,17 +152,6 @@ body {
 /* Dropdown Setup */
 .dropdown {
   position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  position: relative;
 }
 
 /* ▼ Arrow Animation */
@@ -165,16 +170,29 @@ body {
   top: 100%;
   left: 0;
   width: 100vw;
-  background-color: white; /* Updated for clean white dropdown */
-  color: #28265B;
-  padding: 1.5rem 3rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  padding: 1rem 2rem;
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   justify-content: flex-start;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
   z-index: 999;
-  border-top: 1px solid #e5e5e5;
 }
+
+.mega-dropdown a {
+  color: #28265B;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.mega-dropdown a:hover {
+  background-color: #eee;
+  color: #EC7C2D;
+}
+
 
 /* Show dropdown on hover */
 .dropdown:hover .mega-dropdown {
