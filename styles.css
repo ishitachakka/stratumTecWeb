@@ -193,12 +193,6 @@ nav a,
   color: #EC7C2D;
 }
 
-
-/* Show dropdown on hover */
-.dropdown:hover .mega-dropdown {
-  display: flex;
-}
-
 /* Dropdown Columns */
 .dropdown-column {
   display: flex;
