@@ -1,26 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdowns = document.querySelectorAll(".dropdown");
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggles = document.querySelectorAll(".dropbtn");
 
-  dropdowns.forEach((dropdown) => {
-    const button = dropdown.querySelector(".dropbtn");
-    const menu = dropdown.querySelector(".mega-dropdown");
+  dropdownToggles.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const currentDropdown = this.nextElementSibling;
 
-    button.addEventListener("click", (e) => {
-      e.stopPropagation();
+      // Close any other open dropdowns
+      document.querySelectorAll(".mega-dropdown").forEach((dropdown) => {
+        if (dropdown !== currentDropdown) {
+          dropdown.style.display = "none";
+        }
+      });
 
-      // Toggle only this one
-      const isOpen = menu.style.display === "flex";
-      closeAllDropdowns();
-      menu.style.display = isOpen ? "none" : "flex";
+      // Toggle the clicked one
+      currentDropdown.style.display =
+        currentDropdown.style.display === "flex" ? "none" : "flex";
     });
   });
 
-  // Close all on outside click
-  document.addEventListener("click", closeAllDropdowns);
-
-  function closeAllDropdowns() {
-    document.querySelectorAll(".mega-dropdown").forEach((d) => {
-      d.style.display = "none";
-    });
-  }
+  // Optional: close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".mega-dropdown").forEach((dropdown) => {
+        dropdown.style.display = "none";
+      });
+    }
+  });
 });

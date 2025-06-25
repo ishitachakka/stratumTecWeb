@@ -64,6 +64,9 @@ body {
 .hero-overlay {
   z-index: 1;
   padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.75); /* white transparent box */
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .hero-image {
@@ -123,7 +126,7 @@ nav a,
 }
 
 .logo-image {
-  height: 50px; 
+  height:40px; 
   cursor: pointer;
 }
 
@@ -163,34 +166,24 @@ nav a,
   transform: rotate(180deg); /* ▲ */
 }
 
-/* Mega Dropdown Panel */
+/* Hide dropdowns initially */
 .mega-dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100vw;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-  padding: 1rem 2rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   z-index: 999;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.mega-dropdown a {
-  color: #28265B;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 4px;
-}
-
-.mega-dropdown a:hover {
-  background-color: #eee;
-  color: #EC7C2D;
+/* No dropdown on hover */
+.dropdown:hover .mega-dropdown {
+  display: none !important;
 }
 
 /* Dropdown Columns */
