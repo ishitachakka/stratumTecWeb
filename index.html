@@ -21,42 +21,52 @@
     </div>
 
     <nav>
-      <div class="dropdown">
-        <a class="dropbtn">Products <span class="arrow">&#x25BC;</span></a>
-        <div class="mega-dropdown">
-          <a href="products.html#NCS">NCS</a>
-          <a href="products.html#BlueMesh">Blue Mesh</a>
-        </div>
+      <div class="dropdown" data-dropdown="products">
+        <button class="dropbtn">Products <span class="arrow">&#x25BC;</span></button>
       </div>
-
-      <div class="dropdown">
-        <a class="dropbtn">Solutions <span class="arrow">&#x25BC;</span></a>
-        <div class="mega-dropdown">
-          <a href="#">Customer Journey</a>
-          <a href="#">Omnichannel</a>
-          <a href="#">Data Analytics/BI</a>
-          <a href="#">Monetization</a>
-          <a href="#">Integration and DevOps</a>
-          <a href="#">IoT Development</a>
-        </div>
+      <div class="dropdown" data-dropdown="solutions">
+        <button class="dropbtn">Solutions <span class="arrow">&#x25BC;</span></button>
       </div>
-
-      <div class="dropdown">
-        <a class="dropbtn">Expertise <span class="arrow">&#x25BC;</span></a>
-        <div class="mega-dropdown">
-          <a href="#">Customer Journey Mapping</a>
-          <a href="#">Customer Experience Process</a>
-          <a href="#">VoC</a>
-          <a href="#">Assessment</a>
-          <a href="#">Digital Transformation</a>
-        </div>
+      <div class="dropdown" data-dropdown="expertise">
+        <button class="dropbtn">Expertise <span class="arrow">&#x25BC;</span></button>
       </div>
-
       <a href="about.html">About</a>
       <a href="content.html">Content</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- Mega Menus -->
+  <div class="mega-dropdown-panel" id="mega-products">
+    <div class="mega-content">
+      <h3>Products</h3>
+      <a href="products.html#NCS">NCS</a>
+      <a href="products.html#BlueMesh">Blue Mesh</a>
+    </div>
+  </div>
+
+  <div class="mega-dropdown-panel" id="mega-solutions">
+    <div class="mega-content">
+      <h3>Solutions</h3>
+      <a href="#">Customer Journey</a>
+      <a href="#">Omnichannel</a>
+      <a href="#">Data Analytics/BI</a>
+      <a href="#">Monetization</a>
+      <a href="#">Integration and DevOps</a>
+      <a href="#">IoT Development</a>
+    </div>
+  </div>
+
+  <div class="mega-dropdown-panel" id="mega-expertise">
+    <div class="mega-content">
+      <h3>Expertise</h3>
+      <a href="#">Customer Journey Mapping</a>
+      <a href="#">Customer Experience Process</a>
+      <a href="#">VoC</a>
+      <a href="#">Assessment</a>
+      <a href="#">Digital Transformation</a>
+    </div>
+  </div>
 
   <!-- Hero Section with Video and Slogan -->
   <header class="hero">
