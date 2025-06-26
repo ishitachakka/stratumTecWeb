@@ -21,8 +21,8 @@
     </div>
 
     <nav>
-      <div class="dropdown" data-dropdown="products">
-        <button class="dropbtn">Products <span class="arrow">&#x25BC;</span></button>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('mega-products', this)">Products <span class="arrow">&#x25BC;</span></button>
         <div class="mega-dropdown-panel" id="mega-products">
           <div class="mega-content">
             <h3>Products</h3>
@@ -31,8 +31,8 @@
           </div>
         </div>
       </div>
-      <div class="dropdown" data-dropdown="solutions">
-        <button class="dropbtn">Solutions <span class="arrow">&#x25BC;</span></button>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('mega-solutions', this)">Solutions <span class="arrow">&#x25BC;</span></button>
         <div class="mega-dropdown-panel" id="mega-solutions">
           <div class="mega-content">
             <h3>Solutions</h3>
@@ -45,8 +45,8 @@
           </div>
         </div>
       </div>
-      <div class="dropdown" data-dropdown="expertise">
-        <button class="dropbtn">Expertise <span class="arrow">&#x25BC;</span></button>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('mega-expertise', this)">Expertise <span class="arrow">&#x25BC;</span></button>
         <div class="mega-dropdown-panel" id="mega-expertise">
           <div class="mega-content">
             <h3>Expertise</h3>
@@ -169,8 +169,33 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    function toggleDropdown(id, button) {
+      document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+        if (panel.id !== id) panel.style.display = 'none';
+      });
+      const panel = document.getElementById(id);
+      const isOpen = panel.style.display === 'block';
+      document.querySelectorAll('.dropbtn .arrow').forEach(arrow => arrow.classList.remove('open'));
+      if (!isOpen) {
+        panel.style.display = 'block';
+        button.querySelector('.arrow').classList.add('open');
+      } else {
+        panel.style.display = 'none';
+        button.querySelector('.arrow').classList.remove('open');
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(drop => {
+        if (!drop.contains(e.target)) {
+          drop.querySelector('.mega-dropdown-panel').style.display = 'none';
+          drop.querySelector('.arrow').classList.remove('open');
+        }
+      });
+    });
   </script>
-  <script src="navbar.js"></script>
 </body>
 
 </html>
