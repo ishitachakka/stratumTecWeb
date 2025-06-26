@@ -1,31 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
+// navbar.js
+
+document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".dropdown");
-  const panels = document.querySelectorAll(".mega-dropdown-panel");
 
-  dropdowns.forEach((dropdown) => {
-    const type = dropdown.getAttribute("data-dropdown");
-    const panel = document.getElementById(`mega-${type}`);
-    const arrow = dropdown.querySelector(".arrow");
+  dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector(".dropbtn");
+    const panel = dropdown.querySelector(".mega-dropdown-panel");
 
-    dropdown.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = panel.style.display === "block";
+    button.addEventListener("click", () => {
+      const isOpen = dropdown.classList.contains("open");
 
-      // Close all panels
-      panels.forEach((p) => p.style.display = "none");
-      dropdowns.forEach(d => d.classList.remove("open"));
+      // Close all dropdowns first
+      dropdowns.forEach(d => {
+        d.classList.remove("open");
+        d.querySelector(".mega-dropdown-panel").style.display = "none";
+      });
 
-      // Toggle clicked panel
+      // Toggle current dropdown
       if (!isOpen) {
-        panel.style.display = "block";
         dropdown.classList.add("open");
+        panel.style.display = "block";
       }
     });
   });
 
-  // Close on outside click
-  window.addEventListener("click", () => {
-    panels.forEach(p => p.style.display = "none");
-    dropdowns.forEach(d => d.classList.remove("open"));
+  // Close dropdown if click happens outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+      dropdowns.forEach(d => {
+        d.classList.remove("open");
+        d.querySelector(".mega-dropdown-panel").style.display = "none";
+      });
+    }
   });
 });

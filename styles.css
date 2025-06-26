@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6, .navbar, nav a, .dropbtn, .hero-slogan {
 .hero-overlay {
   z-index: 1;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.7); /* lighter transparent white */
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   display: inline-block;
 }
@@ -152,19 +152,16 @@ nav a,
   position: relative;
 }
 
-/* ▼ Arrow Animation */
 .arrow {
   transition: transform 0.3s ease;
 }
 
-/* Do NOT rotate arrow on hover */
 .dropdown.open .arrow {
-  transform: rotate(180deg); /* ▲ on click */
+  transform: rotate(180deg);
 }
 
-/* Mega Dropdown Base */
 .mega-dropdown-panel {
-  display: none; /* hidden by default */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -207,7 +204,7 @@ nav a,
   padding-left: 0.25rem;
 }
 
-/* No hover popups */
+/* Prevent dropdown on hover */
 .dropdown:hover .mega-dropdown-panel {
   display: none !important;
 }
@@ -239,7 +236,7 @@ main.section {
 }
 
 /* Contact Form Section */
-.contact-form {
+.quote-form {
   max-width: 600px;
   margin: 4rem auto;
   padding: 2rem;
@@ -248,20 +245,20 @@ main.section {
   color: #28265B;
 }
 
-.contact-form h2 {
+.quote-form h2 {
   text-align: center;
   margin-bottom: 1rem;
   color: #EC7C2D;
 }
 
-.contact-form form {
+.quote-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.quote-form input,
+.quote-form textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -270,7 +267,7 @@ main.section {
   color: black;
 }
 
-.contact-form button {
+.quote-form button {
   padding: 0.75rem;
   background-color: #EC7C2D;
   color: white;
@@ -280,7 +277,7 @@ main.section {
   border-radius: 4px;
 }
 
-.contact-form button:hover {
+.quote-form button:hover {
   background-color: #cf5f10;
 }
 
