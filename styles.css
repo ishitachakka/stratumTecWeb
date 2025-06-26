@@ -6,8 +6,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  background-color: black;
-  color: white;
+  background-color: #ffffff;
+  color: #28265B;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -20,7 +20,6 @@ body {
 h1, h2, h3, h4, h5, h6, .navbar, nav a, .dropbtn, .hero-slogan {
   font-family: 'Sen', sans-serif;
 }
-
 
 .page-wrapper {
   flex: 1;
@@ -69,7 +68,7 @@ h1, h2, h3, h4, h5, h6, .navbar, nav a, .dropbtn, .hero-slogan {
 .hero-overlay {
   z-index: 1;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.50); /* white transparent box */
+  background-color: rgba(255, 255, 255, 0.7); /* lighter transparent white */
   border-radius: 10px;
   display: inline-block;
 }
@@ -81,17 +80,8 @@ h1, h2, h3, h4, h5, h6, .navbar, nav a, .dropbtn, .hero-slogan {
 .hero-slogan {
   font-size: 1rem;
   font-weight: 300;
-  color: #f0f0f0;
+  color: #EC7C2D;
   margin: 0.2rem 0;
-}
-
-/* Main Content */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
 }
 
 /* Navbar Links */
@@ -131,12 +121,12 @@ nav a,
 }
 
 .logo-image {
-  height:40px; 
+  height: 40px; 
   cursor: pointer;
 }
 
 .translate-link {
-  color: #28265B;
+  color: #EC7C2D;
   font-size: 0.75rem;
   text-decoration: none;
   margin-top: 0.2rem;
@@ -145,7 +135,7 @@ nav a,
 }
 
 .translate-link:hover {
-  color: #EC7C2D;
+  color: #28265B;
   text-decoration: underline;
 }
 
@@ -235,8 +225,8 @@ main.section {
   display: inline-block;
   margin: 2rem auto;
   padding: 0.75rem 1.5rem;
-  background-color: turquoise;
-  color: black;
+  background-color: #EC7C2D;
+  color: white;
   border: none;
   text-decoration: none;
   font-size: 1rem;
@@ -245,7 +235,7 @@ main.section {
 }
 
 .consult-btn:hover {
-  background-color: #00cccc;
+  background-color: #cf5f10;
 }
 
 /* Contact Form Section */
@@ -253,15 +243,15 @@ main.section {
   max-width: 600px;
   margin: 4rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(40, 38, 91, 0.05);
   border-radius: 8px;
-  color: white;
+  color: #28265B;
 }
 
 .contact-form h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: turquoise;
+  color: #EC7C2D;
 }
 
 .contact-form form {
@@ -282,8 +272,8 @@ main.section {
 
 .contact-form button {
   padding: 0.75rem;
-  background-color: turquoise;
-  color: black;
+  background-color: #EC7C2D;
+  color: white;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -291,218 +281,23 @@ main.section {
 }
 
 .contact-form button:hover {
-  background-color: #00cccc;
-}
-
-/* Product Page Section */
-.product-section {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-}
-
-.product-box {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
-}
-
-.product-box.reverse {
-  flex-direction: row-reverse;
-}
-
-.product-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.product-content {
-  flex: 1 1 400px;
-  color: white;
-}
-
-.product-content h3 {
-  color: turquoise;
-  margin-bottom: 0.5rem;
-}
-
-.product-content a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: turquoise;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.product-content a:hover {
-  text-decoration: underline;
-}
-
-/* Expertise Cards */
-.expertise {
-  background-color: black;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.expertise h2 {
-  color: #40E0D0;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.expertise-card {
-  background-color: #1a1a1a;
-  border: 1px solid #40E0D0;
-  border-radius: 10px;
-  padding: 2rem;
-  flex: 1 1 280px;
-  max-width: 320px;
-  box-shadow: 0 0 12px rgba(64, 224, 208, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 280px;
-}
-
-.expertise-card h3 {
-  color: #40E0D0;
-  margin-bottom: 1rem;
-}
-
-.expertise-card p {
-  color: #ccc;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.expertise-card a {
-  color: #40E0D0;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.expertise-card a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .container-cards {
-    flex-direction: column;
-    align-items: center;
-  }
+  background-color: #cf5f10;
 }
 
 /* Footer full-width background */
 .site-footer {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: #28265B;
   color: white;
   padding: 3rem 1rem;
   width: 100%;
 }
 
-/* Footer inner container centered */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3rem;
-}
-
-/* Left company description */
-.footer-left {
-  flex: 2;
-  min-width: 250px;
-}
-
-.footer-left h2 {
-  color: turquoise;
-  margin-bottom: 1rem;
+.footer-left h2,
+.footer-column h3,
+.footer-column ul li a:hover {
+  color: #EC7C2D;
 }
 
 .footer-left p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-/* Right-side columns container */
-.footer-right {
-  flex: 3;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-/* Individual columns */
-.footer-column {
-  flex: 1;
-  min-width: 140px;
-}
-
-.footer-column h3 {
-  color: turquoise;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 0.4rem;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-.footer-column ul li a:hover {
-  color: turquoise;
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-  .site-footer {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-left,
-  .footer-right {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .footer-right {
-    justify-content: center;
-  }
+  color: #ccc;
 }

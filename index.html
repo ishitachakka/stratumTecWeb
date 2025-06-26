@@ -4,175 +4,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratumTec</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Transform your customer experience with integrated, personalized CX solutions. Discover how we can optimize your operations.">
+  <meta name="keywords" content="customer experience solutions, CX integration, call center development, customer journey assessment, CX technology in Brazil">
+  <meta name="author" content="StratumTec">
+  <title>StratumTec – Where Innovation Meets Excellence</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 
-<body class="page-wrapper">
-  <!-- HTML NAVBAR -->
+<body>
   <header class="navbar">
     <div class="logo-block">
-      <a href="index.html" class="logo-link">
-        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
+      <a href="index.html">
+        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" width="400" height="100" />
       </a>
-      <a href="indexP.html" id="translate-btn" class="translate-link">português</a>
-    </div>
-
-    <nav>
-      <div class="dropdown" data-dropdown="products">
-        <button class="dropbtn">Products <span class="arrow">&#x25BC;</span></button>
-      </div>
-      <div class="dropdown" data-dropdown="solutions">
-        <button class="dropbtn">Solutions <span class="arrow">&#x25BC;</span></button>
-      </div>
-      <div class="dropdown" data-dropdown="expertise">
-        <button class="dropbtn">Expertise <span class="arrow">&#x25BC;</span></button>
-      </div>
-      <a href="about.html">About</a>
-      <a href="content.html">Content</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Mega Menus -->
-  <div class="mega-dropdown-panel" id="mega-products">
-    <div class="mega-content">
-      <h3>Products</h3>
-      <a href="products.html#NCS">NCS</a>
-      <a href="products.html#BlueMesh">Blue Mesh</a>
-    </div>
-  </div>
-
-  <div class="mega-dropdown-panel" id="mega-solutions">
-    <div class="mega-content">
-      <h3>Solutions</h3>
-      <a href="#">Customer Journey</a>
-      <a href="#">Omnichannel</a>
-      <a href="#">Data Analytics/BI</a>
-      <a href="#">Monetization</a>
-      <a href="#">Integration and DevOps</a>
-      <a href="#">IoT Development</a>
-    </div>
-  </div>
-
-  <div class="mega-dropdown-panel" id="mega-expertise">
-    <div class="mega-content">
-      <h3>Expertise</h3>
-      <a href="#">Customer Journey Mapping</a>
-      <a href="#">Customer Experience Process</a>
-      <a href="#">VoC</a>
-      <a href="#">Assessment</a>
-      <a href="#">Digital Transformation</a>
-    </div>
-  </div>
-
-  <!-- Hero Section with Video and Slogan -->
-  <header class="hero">
-    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/orangeTech.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay" data-aos="fade-down">
-      <img src="assets/logo.png" alt="StratumTec Logo" class="hero-image" />
-      <p class="hero-slogan">Where Innovation Meets Excellence</p>
+      <nav class="main-nav">
+        <a href="company.html">Company</a>
+        <a href="products.html">Products</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="trends.html">Insights & Trends</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="section">
-    <div>
-      <h2>Your Partner in Smart IT Solutions</h2>
-      <p>At Stratum Technologies, we prioritize understanding your unique business needs and challenges. Our team of
-        experts delivers cost-effective, scalable, and tailored IT solutions that align with your operational goals. We
-        combine deep technical expertise with personalized service to ensure lasting success for our clients.</p>
+  <section class="hero-carousel">
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="assets/slide1.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay-text">
+        <h2>Empowering Customer Experience Through Innovation</h2>
+        <a href="#solutions" class="slide-cta">Learn More</a>
+      </div>
     </div>
-  </main>
+    <!-- Add two more slides -->
+  </section>
 
-  <!-- Expertise Cards Section -->
-  <section class="expertise">
-    <h2>Our Expertise</h2>
-    <div class="container-cards">
-      <div class="expertise-card" data-aos="fade-right">
-        <h3>Product Development</h3>
-        <p>We build robust and scalable products from concept to launch, ensuring a focus on user experience and
-          business value.</p>
-        <a href="product-development.html">Learn More</a>
-      </div>
-      <div class="expertise-card" data-aos="fade-up">
-        <h3>Cloud Solutions</h3>
-        <p>Implementing secure, efficient cloud infrastructures and services that let your business leverage the power
-          of the cloud at scale.</p>
-        <a href="cloud-solutions.html">Learn More</a>
-      </div>
-      <div class="expertise-card" data-aos="fade-left">
-        <h3>DevOps & Integrations</h3>
-        <p>Automating workflows and integrating systems to streamline development and deployment, improving your team’s
-          efficiency and agility.</p>
-        <a href="devops-and-integration.html">Learn More</a>
-      </div>
+  <section class="offers">
+    <h2>Featured Solutions</h2>
+    <p>Explore our most in-demand products and services.</p>
+    <a href="solutions.html" class="cta-button">Explore</a>
+  </section>
+
+  <section class="partners">
+    <h2>Our Partners</h2>
+    <div class="partner-carousel">
+      <!-- Insert partner logos here -->
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <h2>StratumTec</h2>
-        <p>
-          StratumTec offers innovative and reliable IT solutions globally through a skilled team
-          and trusted partners. We reduce development costs and increase value through high-quality
-          software services, scalable cloud platforms, and strategic support. Our solutions include
-          product development, DevOps, IoT, consulting, and modern platforms like NCS for VoIP
-          communication and Blue Mesh for AI integration—ensuring flexibility, reliability, and
-          performance across time zones.
-        </p>
-      </div>
+  <section class="quote-form">
+    <h2>Request a Quote</h2>
+    <form action="mailto:contato@stratumtec.com" method="POST">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-      <div class="footer-right">
-        <div class="footer-column">
-          <h3>Company</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Expertise</h3>
-          <ul>
-            <li><a href="#">Cloud Solutions</a></li>
-            <li><a href="#">DevOps & Integrations</a></li>
-            <li><a href="#">Product Development</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="#">NCS</a></li>
-            <li><a href="#">Bluemesh</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
+  <section class="latest-posts">
+    <h2>Latest Insights & Trends</h2>
+    <div class="post-grid">
+      <!-- Insert latest blog previews here -->
+    </div>
+    <a href="blog.html" class="cta-button">View More</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="company.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="products.html#NCS">NCS</a></li>
+          <li><a href="products.html#BlueMesh">Blue Mesh</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="solutions.html">All Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Expertise</h3>
+        <ul>
+          <li><a href="expertise.html">Our Expertise</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Insights</h3>
+        <ul>
+          <li><a href="trends.html">Trends & Research</a></li>
+        </ul>
       </div>
     </div>
+    <p>&copy; 2025 StratumTec. All rights reserved.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="navbar.js"></script>
 </body>
 
 </html>
