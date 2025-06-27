@@ -116,27 +116,32 @@ body {
 
 /* NAVBAR MENU */
 
+/* NAVBAR MENU BASE CLEANUP */
 nav.navbar ul.menu {
-  list-style: none;
+  list-style: none; /* remove bullet points */
   display: flex;
+  justify-content: flex-end; /* aligns nav items to the right */
+  align-items: center;
+  gap: 1.5rem; /* spacing between menu items */
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
 }
 
+/* NAVBAR MENU ITEMS */
 nav.navbar ul.menu li {
   position: relative;
 }
 
 nav.navbar ul.menu li a {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   color: #28265B;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav.navbar ul.menu li:hover > a {
+nav.navbar ul.menu li a:hover {
   color: #EC7C2D;
 }
 
@@ -158,6 +163,8 @@ nav.navbar ul.menu li:hover > a {
 
 .mega-menu-content {
   display: flex;
+  flex-wrap: nowrap; /* ensures single row */
+  justify-content: flex-start;
   padding: 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -187,6 +194,7 @@ nav.navbar ul.menu li:hover > a {
   color: #28265B;
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap; /* prevent wrapping */
 }
 
 .menu-options a:hover {
