@@ -114,21 +114,24 @@ body {
   text-decoration: underline;
 }
 
-/* NAVBAR MENU */
-
-/* NAVBAR MENU BASE CLEANUP */
-nav.navbar ul.menu {
-  list-style: none; /* remove bullet points */
+nav.navbar {
   display: flex;
-  justify-content: flex-end; /* aligns nav items to the right */
   align-items: center;
-  gap: 1.5rem; /* spacing between menu items */
+  justify-content: flex-end;
+  background: white;
+  padding: 0;
+}
+
+nav.navbar ul.menu {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
-/* NAVBAR MENU ITEMS */
 nav.navbar ul.menu li {
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -146,7 +149,7 @@ nav.navbar ul.menu li a:hover {
 }
 
 /* =========================
-   MEGA MENU PANEL
+   MEGA MENU
    ========================= */
 
 .mega-menu-panel {
@@ -162,9 +165,9 @@ nav.navbar ul.menu li a:hover {
 }
 
 .mega-menu-content {
-  display: flex;
-  flex-wrap: nowrap; /* ensures single row */
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
   padding: 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -172,7 +175,6 @@ nav.navbar ul.menu li a:hover {
 }
 
 .menu-title {
-  flex: 1;
   font-size: 1.2rem;
   font-weight: bold;
   color: #EC7C2D;
@@ -181,7 +183,6 @@ nav.navbar ul.menu li a:hover {
 }
 
 .menu-options {
-  flex: 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
@@ -194,7 +195,7 @@ nav.navbar ul.menu li a:hover {
   color: #28265B;
   text-decoration: none;
   transition: color 0.3s ease;
-  white-space: nowrap; /* prevent wrapping */
+  white-space: nowrap;
 }
 
 .menu-options a:hover {
@@ -317,8 +318,7 @@ main.section {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 2.5rem;
-  flex: 3;
+  gap: 3rem;
 }
 
 .footer-column {
