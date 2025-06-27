@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratumTec</title>
+  <title>StratumTec | Company</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="page-wrapper">
   <!-- NAVBAR -->
   <header class="navbar">
@@ -13,13 +17,13 @@
       <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
       </a>
-      <a href="expertiseP.html" id="translate-btn" class="translate-link">português</a>
+      <a href="companyP.html" id="translate-btn" class="translate-link">português</a>
     </div>
 
     <nav>
       <div class="dropdown">
-        <button class="dropbtn">Products</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('products')">Products</button>
+        <div class="mega-dropdown-panel" id="products">
           <div class="mega-content">
             <h3>Products</h3>
             <a href="products.html#NCS">NCS</a>
@@ -29,8 +33,8 @@
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Solutions</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('solutions')">Solutions</button>
+        <div class="mega-dropdown-panel" id="solutions">
           <div class="mega-content">
             <h3>Solutions</h3>
             <a href="solutions.html#CustomerJourney">Customer Journey</a>
@@ -44,15 +48,15 @@
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Expertise</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('expertise')">Expertise</button>
+        <div class="mega-dropdown-panel" id="expertise">
           <div class="mega-content">
             <h3>Expertise</h3>
-            <a href="#CustomerJourneyMapping">Customer Journey Mapping</a>
-            <a href="#CustomerExperienceProcess">Customer Experience Process</a>
-            <a href="#VoC">VoC</a>
-            <a href="#Assessment">Assessment</a>
-            <a href="#DigitalTransformation">Digital Transformation</a>
+            <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
+            <a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
+            <a href="expertise.html#VoC">VoC</a>
+            <a href="expertise.html#Assessment">Assessment</a>
+            <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
           </div>
         </div>
       </div>
@@ -63,55 +67,57 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
   <main class="section">
-    <div>
+    <div class="info-box">
       <h1>We Craft Your IT Solutions, While You Craft Your Business</h1>
       <h2>Why Choose StratumTec</h2>
-      <p>Our objective is to be a stratum of your business. We go beyond mere software development. We offer you the
-        expertise and support you need; to design develop and maintain your IT solutions. We take care of your
-        technology needs, so you can manage your business effortlessly.</p>
+      <p>Our objective is to be a stratum of your business. We go beyond mere software development, offering expertise and
+        support to design, develop, and maintain your IT solutions, allowing you to manage your business effortlessly.</p>
     </div>
 
-    <div>
+    <div class="info-box">
       <h2>Technology</h2>
-      <p>Choose the best tech for your needs with us. Our people and clients are our strength. Dedicated support and
-        on-time delivery for a seamless experience.</p>
+      <p>Choose the best tech for your needs with us. Our people and clients are our strength, with dedicated support and
+        on-time delivery ensuring a seamless experience.</p>
     </div>
 
-    <div>
+    <div class="info-box">
       <h2>Delivery</h2>
-      <p>Our diverse team prioritizes on-time delivery for complete client satisfaction, fostering an open-minded
-        approach to project delivery</p>
+      <p>Our diverse team prioritizes on-time delivery for complete client satisfaction, fostering an open-minded approach
+        to project delivery.</p>
     </div>
 
-    <div>
+    <div class="info-box">
       <h2>Support</h2>
-      <p>Dedicated client support, latest tech expertise - our focus. Unparalleled service ensured through alignment and
-        updates.</p>
+      <p>Dedicated client support and latest tech expertise are our focus, ensuring unparalleled service through alignment
+        and timely updates.</p>
     </div>
 
-    <div id="contact-form" class="contact-form">
+    <!-- Added Buffer Section -->
+    <div class="info-box">
+      <h2>Our Mission</h2>
+      <p>To empower businesses through innovative, scalable, and reliable IT solutions tailored to your unique challenges.</p>
+    </div>
+
+    <div class="info-box">
+      <h2>Our Vision</h2>
+      <p>To be a global leader in digital transformation, enabling clients to unlock their full potential through technology.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="info-box quote-form">
       <h2>Get in Touch</h2>
-      <p>Simply send us an email anytime you want. We are open to all suggestions from our audience.</p>
+      <p>Simply send us an email anytime. We welcome all suggestions and inquiries.</p>
 
       <form action="mailto:sales@stratumtec.com" method="POST" enctype="text/plain">
-        <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required />
-
-        <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Enter your email ID" required />
-
-        <label for="subject">Subject</label>
         <input type="text" id="subject" name="subject" placeholder="Enter your subject" required />
-
-        <label for="message">How may we help you?</label>
         <textarea id="message" name="message" placeholder="Describe your message here" rows="5" required></textarea>
-
         <button type="submit">Schedule a Consultation</button>
       </form>
     </div>
-
   </main>
 
   <!-- FOOTER -->
@@ -178,6 +184,28 @@
     </p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDropdown(id) {
+      document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+        if (panel.id !== id) panel.style.display = 'none';
+      });
+      const panel = document.getElementById(id);
+      panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+          panel.style.display = 'none';
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>

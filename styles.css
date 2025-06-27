@@ -6,24 +6,12 @@ body {
   font-family: 'Sen', sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  background-color: #ffffff;
+  background-color: black; /* black background under hero */
   color: #28265B;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   max-width: 100%;
-}
-
-main.section {
-  background-color: black;
-  padding: 4rem 2rem;
-}
-
-.info-box {
-  background-color: rgba(255, 255, 255, 0.75); /* opaque white boxes */
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 2rem;
 }
 
 .page-wrapper {
@@ -41,7 +29,6 @@ main.section {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: black;
   overflow: hidden;
 }
 
@@ -60,7 +47,6 @@ main.section {
   padding: 3rem;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
-  display: inline-block;
 }
 
 .hero-image {
@@ -68,9 +54,9 @@ main.section {
 }
 
 .hero-slogan {
-  font-size: 1.5rem; /* bigger text */
+  font-size: 1.5rem;
   font-weight: 400;
-  color: white; /* changed to white */
+  color: white;
   margin: 0.5rem 0;
 }
 
@@ -78,7 +64,7 @@ main.section {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* vertically centers items */
+  align-items: center;
   padding: 0.8rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -117,8 +103,7 @@ main.section {
   gap: 1.5rem;
 }
 
-nav a,
-.dropbtn {
+nav a, .dropbtn {
   text-decoration: none;
   color: #28265B;
   font-size: 0.95rem;
@@ -134,8 +119,7 @@ nav a,
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-.dropbtn:hover {
+nav a:hover, .dropbtn:hover {
   color: #EC7C2D;
 }
 
@@ -149,7 +133,6 @@ nav a:hover,
   position: absolute;
   top: 100%;
   left: 0;
-  width: auto;
   min-width: 250px;
   max-width: 800px;
   background-color: white;
@@ -198,13 +181,13 @@ main.section {
 }
 
 .info-box {
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
+/* Buttons */
 .consult-btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -229,8 +212,7 @@ main.section {
   gap: 1rem;
 }
 
-.quote-form input,
-.quote-form textarea {
+.quote-form input, .quote-form textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -295,7 +277,7 @@ main.section {
 
 .footer-column {
   min-width: 150px;
-  max-width: 200px; /* prevent overflow */
+  max-width: 200px;
   word-wrap: break-word;
 }
 
@@ -328,6 +310,8 @@ main.section {
 .site-footer .legal {
   color: #ccc;
   margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
 }
 
 .site-footer .legal a:hover {

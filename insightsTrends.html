@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratumTec | Expertise</title>
+  <title>StratumTec | Insights & Trends</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
       </a>
-      <a href="expertiseP.html" id="translate-btn" class="translate-link">português</a>
+      <a href="insightsTrendsP.html" id="translate-btn" class="translate-link">português</a>
     </div>
 
     <nav>
@@ -52,11 +52,11 @@
         <div class="mega-dropdown-panel">
           <div class="mega-content">
             <h3>Expertise</h3>
-            <a href="#CustomerJourneyMapping">Customer Journey Mapping</a>
-            <a href="#CustomerExperienceProcess">Customer Experience Process</a>
-            <a href="#VoC">VoC</a>
-            <a href="#Assessment">Assessment</a>
-            <a href="#DigitalTransformation">Digital Transformation</a>
+            <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
+            <a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
+            <a href="expertise.html#VoC">VoC</a>
+            <a href="expertise.html#Assessment">Assessment</a>
+            <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
           </div>
         </div>
       </div>
@@ -66,6 +66,33 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="section">
+    <div class="info-box">
+      <h2>Latest Insights & Trends</h2>
+      <p>Stay updated with the latest industry trends, technology insights, and company updates from StratumTec.</p>
+    </div>
+
+    <!-- Sample blog post placeholder -->
+    <div class="info-box">
+      <h3>How AI is Transforming the Customer Journey</h3>
+      <p>Explore how artificial intelligence and data analytics are reshaping the way businesses understand and engage with customers.</p>
+      <a href="#" class="consult-btn">Read More</a>
+    </div>
+
+    <div class="info-box">
+      <h3>DevOps Best Practices for 2025</h3>
+      <p>Learn about the emerging DevOps methodologies, tools, and cultural practices that are driving faster, more secure deployments.</p>
+      <a href="#" class="consult-btn">Read More</a>
+    </div>
+
+    <div class="info-box">
+      <h3>Cloud Migration Strategies</h3>
+      <p>Understand the critical considerations for migrating legacy systems to the cloud efficiently and securely.</p>
+      <a href="#" class="consult-btn">Read More</a>
+    </div>
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -131,5 +158,28 @@
     </p>
   </footer>
 
-  </body>
-  </html>
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDropdown(id) {
+      document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+        if (panel !== document.getElementById(id)) panel.style.display = 'none';
+      });
+      const panel = document.getElementById(id);
+      panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+          panel.style.display = 'none';
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
