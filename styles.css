@@ -1,26 +1,28 @@
-/* Base Reset & Typography */
-body {
+/* =========================
+   BASE RESET & TYPOGRAPHY
+   ========================= */
+
+* {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
   font-family: 'Sen', sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  background-color: black; /* black background under hero */
+  background-color: black;
   color: #28265B;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
   max-width: 100%;
-  position: relative; /* for pseudo fix */
 }
 
-body::after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-  width: 0;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
 .page-wrapper {
@@ -30,7 +32,10 @@ body::after {
   min-height: 100vh;
 }
 
-/* Hero Section */
+/* =========================
+   HERO SECTION
+   ========================= */
+
 .hero {
   position: relative;
   display: flex;
@@ -69,7 +74,10 @@ body::after {
   margin: 0.5rem 0;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+   ========================= */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -106,37 +114,7 @@ body::after {
   text-decoration: underline;
 }
 
-.navbar nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-nav a, .dropbtn {
-  text-decoration: none;
-  color: #28265B;
-  font-size: 0.95rem;
-  font-weight: 400;
-  font-family: 'Sen', sans-serif;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 0.4rem 0;
-  transition: color 0.3s ease;
-}
-
-nav a:hover, .dropbtn:hover {
-  color: #EC7C2D;
-}
-
-/* Navbar Menu Base */
-nav.navbar {
-  background: white;
-  width: 100%;
-}
+/* NAVBAR MENU */
 
 nav.navbar ul.menu {
   list-style: none;
@@ -155,61 +133,70 @@ nav.navbar ul.menu li a {
   color: #28265B;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav.navbar ul.menu li:hover > a {
   color: #EC7C2D;
 }
 
-/* Mega Menu Full Width */
-nav.navbar ul.menu li .mega-menu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100vw; /* full viewport width */
-  background: #f9f9f9;
-  padding: 2rem 4rem;
+/* =========================
+   MEGA MENU PANEL
+   ========================= */
+
+.mega-menu-panel {
   display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 999; /* ensure above page content */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 99;
 }
 
-nav.navbar ul.menu li:hover .mega-menu {
-  display: block;
-}
-
-/* Mega Menu Content Grid */
-nav.navbar ul.menu li .mega-menu .content {
+.mega-menu-content {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* wrap if too many columns */
-  max-width: 1200px; /* adjust as needed */
+  padding: 2rem 4rem;
+  max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
-nav.navbar ul.menu li .mega-menu .content .row {
-  flex: 1 1 200px;
-  margin: 1rem;
-}
-
-nav.navbar ul.menu li .mega-menu .content .row h3 {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+.menu-title {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: #EC7C2D;
+  border-right: 2px solid #EC7C2D;
+  padding-right: 2rem;
 }
 
-nav.navbar ul.menu li .mega-menu .content .row a {
+.menu-options {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.menu-options a {
   display: block;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
   color: #28265B;
-  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-nav.navbar ul.menu li .mega-menu .content .row a:hover {
+.menu-options a:hover {
   color: #EC7C2D;
 }
 
-/* Main Section */
+/* =========================
+   MAIN SECTION
+   ========================= */
+
 main.section {
   max-width: 1000px;
   margin: 2rem auto;
@@ -226,7 +213,10 @@ main.section {
   text-align: center;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+   ========================= */
+
 .consult-btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -244,14 +234,18 @@ main.section {
   background-color: #cf5f10;
 }
 
-/* Quote Form */
+/* =========================
+   QUOTE FORM
+   ========================= */
+
 .quote-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.quote-form input, .quote-form textarea {
+.quote-form input,
+.quote-form textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -274,7 +268,10 @@ main.section {
   background-color: #cf5f10;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
+
 .site-footer {
   background-color: #28265B;
   color: white;
@@ -283,16 +280,17 @@ main.section {
 }
 
 .footer-container {
-  max-width: 1200px; /* constrain width to prevent overflow */
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .footer-left {
-  flex: 1 1 250px;
+  flex: 1;
   min-width: 200px;
 }
 
@@ -310,14 +308,15 @@ main.section {
 .footer-right {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* prevents wrapping */
-  gap: 2rem;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
   flex: 3;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 150px;
+  min-width: 140px;
+  max-width: 200px;
 }
 
 .footer-column h3 {
@@ -346,6 +345,13 @@ main.section {
   color: #EC7C2D;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(255,255,255,0.2);
+  margin: 2rem 0;
+}
+
 .site-footer .legal {
   margin-top: 2rem;
   text-align: center;
@@ -360,15 +366,3 @@ main.section {
 .site-footer .legal a:hover {
   text-decoration: underline;
 }
-
-html, body {
-  overflow-x: hidden;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: rgba(255,255,255,0.2);
-  margin: 2rem 0;
-}
-
