@@ -132,26 +132,23 @@ nav a:hover, .dropbtn:hover {
   color: #EC7C2D;
 }
 
-/* Mega Menu Styles */
-nav.mega-menu {
-  background: #fff;
-  position: relative;
-  z-index: 1000;
+/* Mega Menu Inspired by YouTube Video */
+nav.navbar {
+  background: white;
 }
 
-nav.mega-menu ul {
+nav.navbar ul.menu {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
+  padding: 0;
   margin: 0;
-  padding: 0 2rem;
 }
 
-nav.mega-menu ul li {
+nav.navbar ul.menu li {
   position: relative;
 }
 
-nav.mega-menu ul li a {
+nav.navbar ul.menu li a {
   display: block;
   padding: 1rem 1.5rem;
   color: #28265B;
@@ -159,46 +156,50 @@ nav.mega-menu ul li a {
   font-weight: 500;
 }
 
-nav.mega-menu ul li:hover > a {
+nav.navbar ul.menu li:hover > a {
   color: #EC7C2D;
 }
 
-/* Sub Menu (Mega Dropdown) */
-nav.mega-menu ul li .sub-menu {
+/* Mega Menu Styles */
+nav.navbar ul.menu li .mega-menu {
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100vw; /* full screen width */
+  width: 100vw;
   background: #f9f9f9;
   padding: 2rem 4rem;
   display: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-nav.mega-menu ul li:hover .sub-menu {
+nav.navbar ul.menu li:hover .mega-menu {
+  display: block;
+}
+
+nav.navbar ul.menu li .mega-menu .content {
   display: flex;
   justify-content: flex-start;
   gap: 4rem;
 }
 
-nav.mega-menu ul li .sub-menu .sub-row {
+nav.navbar ul.menu li .mega-menu .content .row {
   min-width: 200px;
 }
 
-nav.mega-menu ul li .sub-menu .sub-row h4 {
+nav.navbar ul.menu li .mega-menu .content .row h3 {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #EC7C2D;
 }
 
-nav.mega-menu ul li .sub-menu .sub-row a {
+nav.navbar ul.menu li .mega-menu .content .row a {
   display: block;
   margin-bottom: 0.5rem;
   color: #28265B;
   font-size: 0.95rem;
 }
 
-nav.mega-menu ul li .sub-menu .sub-row a:hover {
+nav.navbar ul.menu li .mega-menu .content .row a:hover {
   color: #EC7C2D;
 }
 
@@ -301,17 +302,16 @@ main.section {
 }
 
 .footer-right {
-  flex: 3 1 600px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: nowrap; /* prevents wrapping */
   gap: 2rem;
+  flex: 3;
 }
 
 .footer-column {
-  flex: 1 1 150px;
-  min-width: 120px;
-  max-width: 200px;
+  flex: 1;
+  min-width: 150px;
 }
 
 .footer-column h3 {
