@@ -17,39 +17,39 @@
       <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
       </a>
-      <a href="solutionsP.html" id="translate-btn" class="translate-link">português</a>
+      <a href="productsP.html" id="translate-btn" class="translate-link">português</a>
     </div>
 
     <nav>
       <div class="dropdown">
-        <button class="dropbtn">Products</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('products')">Products</button>
+        <div class="mega-dropdown-panel" id="products">
           <div class="mega-content">
             <h3>Products</h3>
-            <a href="products.html#NCS">NCS</a>
-            <a href="products.html#BlueMesh">Blue Mesh</a>
+            <a href="#NCS">NCS</a>
+            <a href="#BlueMesh">Blue Mesh</a>
           </div>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Solutions</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('solutions')">Solutions</button>
+        <div class="mega-dropdown-panel" id="solutions">
           <div class="mega-content">
             <h3>Solutions</h3>
-            <a href="#CustomerJourney">Customer Journey</a>
-            <a href="#Omnichannel">Omnichannel</a>
-            <a href="#DataAnalytics">Data Analytics | BI</a>
-            <a href="#Monetization">Monetization</a>
-            <a href="#DevOpsIntegration">DevOps & Integration</a>
-            <a href="#IoTDevelopment">IoT Development</a>
+            <a href="solutions.html#CustomerJourney">Customer Journey</a>
+            <a href="solutions.html#Omnichannel">Omnichannel</a>
+            <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
+            <a href="solutions.html#Monetization">Monetization</a>
+            <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
+            <a href="solutions.html#IoTDevelopment">IoT Development</a>
           </div>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Expertise</button>
-        <div class="mega-dropdown-panel">
+        <button class="dropbtn" onclick="toggleDropdown('expertise')">Expertise</button>
+        <div class="mega-dropdown-panel" id="expertise">
           <div class="mega-content">
             <h3>Expertise</h3>
             <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
