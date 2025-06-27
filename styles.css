@@ -132,16 +132,17 @@ nav a:hover, .dropbtn:hover {
   color: #EC7C2D;
 }
 
-/* Mega Menu Inspired by YouTube Video */
+/* Navbar Menu Base */
 nav.navbar {
   background: white;
+  width: 100%;
 }
 
 nav.navbar ul.menu {
   list-style: none;
   display: flex;
-  padding: 0;
   margin: 0;
+  padding: 0 2rem;
 }
 
 nav.navbar ul.menu li {
@@ -160,30 +161,35 @@ nav.navbar ul.menu li:hover > a {
   color: #EC7C2D;
 }
 
-/* Mega Menu Styles */
+/* Mega Menu Full Width */
 nav.navbar ul.menu li .mega-menu {
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100vw;
+  width: 100vw; /* full viewport width */
   background: #f9f9f9;
   padding: 2rem 4rem;
   display: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 999; /* ensure above page content */
 }
 
 nav.navbar ul.menu li:hover .mega-menu {
   display: block;
 }
 
+/* Mega Menu Content Grid */
 nav.navbar ul.menu li .mega-menu .content {
   display: flex;
-  justify-content: flex-start;
-  gap: 4rem;
+  justify-content: space-around;
+  flex-wrap: wrap; /* wrap if too many columns */
+  max-width: 1200px; /* adjust as needed */
+  margin: 0 auto;
 }
 
 nav.navbar ul.menu li .mega-menu .content .row {
-  min-width: 200px;
+  flex: 1 1 200px;
+  margin: 1rem;
 }
 
 nav.navbar ul.menu li .mega-menu .content .row h3 {
