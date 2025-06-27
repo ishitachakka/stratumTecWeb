@@ -50,9 +50,8 @@ ul {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  text-align: center;
   overflow: hidden;
-  background-color: transparent; /* ensure video is visible */
+  background-color: none; 
 }
 
 .hero-video {
@@ -63,7 +62,6 @@ ul {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  display: block; /* ensure video shows */
 }
 
 .hero-overlay {
@@ -196,8 +194,8 @@ nav.navbar-nav ul.menu li a:hover {
 
 .menu-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem 2rem; /* added column gap for spacing between options */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
   padding-left: 2rem;
 }
 
@@ -335,8 +333,8 @@ main.section {
 
 .footer-column {
   flex: 1;
-  min-width: 140px;
-  max-width: 200px;
+  min-width: 180px;
+  max-width: 240px;
 }
 
 .footer-column h3 {
