@@ -52,7 +52,7 @@ ul {
   height: 100vh;
   text-align: center;
   overflow: hidden;
-  background-color: black; /* fallback if video fails */
+  background-color: transparent; /* ensure video is visible */
 }
 
 .hero-video {
@@ -63,6 +63,7 @@ ul {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  display: block; /* ensure video shows */
 }
 
 .hero-overlay {
@@ -195,14 +196,14 @@ nav.navbar-nav ul.menu li a:hover {
 
 .menu-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* adjusted to prevent overlapping */
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 2rem; /* added column gap for spacing between options */
   padding-left: 2rem;
 }
 
 .menu-options a {
   display: block;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0; /* increased top-bottom padding for spacing */
   color: #28265B;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -306,7 +307,7 @@ main.section {
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* reduced side padding */
+  padding: 0 0.5rem; /* reduced side padding further */
 }
 
 .footer-left {
