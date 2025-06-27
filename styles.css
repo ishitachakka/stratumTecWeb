@@ -14,6 +14,18 @@ body {
   max-width: 100%;
 }
 
+main.section {
+  background-color: black;
+  padding: 4rem 2rem;
+}
+
+.info-box {
+  background-color: rgba(255, 255, 255, 0.75); /* opaque white boxes */
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
 .page-wrapper {
   flex: 1;
   display: flex;
@@ -56,9 +68,9 @@ body {
 }
 
 .hero-slogan {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* bigger text */
   font-weight: 400;
-  color: #EC7C2D;
+  color: white; /* changed to white */
   margin: 0.5rem 0;
 }
 
@@ -111,6 +123,7 @@ nav a,
   color: #28265B;
   font-size: 0.95rem;
   font-weight: 400;
+  font-family: 'Sen', sans-serif;
   background: none;
   border: none;
   cursor: pointer;
@@ -281,7 +294,9 @@ main.section {
 }
 
 .footer-column {
-  min-width: 140px;
+  min-width: 150px;
+  max-width: 200px; /* prevent overflow */
+  word-wrap: break-word;
 }
 
 .footer-column h3 {

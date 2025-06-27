@@ -1,27 +1,32 @@
 AOS.init();
 
-    function toggleDropdown(id, button) {
-      document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
-        if (panel.id !== id) panel.style.display = 'none';
-      });
-      const panel = document.getElementById(id);
-      const isOpen = panel.style.display === 'block';
-      document.querySelectorAll('.dropbtn .arrow').forEach(arrow => arrow.classList.remove('open'));
-      if (!isOpen) {
-        panel.style.display = 'block';
-        button.querySelector('.arrow').classList.add('open');
-      } else {
-        panel.style.display = 'none';
-        button.querySelector('.arrow').classList.remove('open');
-      }
-    }
+// Function to toggle dropdown on click
+function toggleDropdown(id) {
+  document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+    if (panel.id !== id) panel.style.display = 'none';
+  });
 
-    document.addEventListener('click', (e) => {
-      const dropdowns = document.querySelectorAll('.dropdown');
-      dropdowns.forEach(drop => {
-        if (!drop.contains(e.target)) {
-          drop.querySelector('.mega-dropdown-panel').style.display = 'none';
-          drop.querySelector('.arrow').classList.remove('open');
-        }
-      });
+  const panel = document.getElementById(id);
+  const isOpen = panel.style.display === 'block';
+  panel.style.display = isOpen ? 'none' : 'block';
+}
+
+// Attach event listeners to each dropbtn
+document.querySelectorAll('.dropbtn').forEach(button => {
+  const dropdown = button.parentElement;
+  const panelId = dropdown.querySelector('.mega-dropdown-panel').id;
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent event bubbling
+    toggleDropdown(panelId);
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.mega-dropdown-panel').forEach(panel => {
+      panel.style.display = 'none';
     });
+  }
+});
