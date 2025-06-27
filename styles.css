@@ -324,3 +324,12 @@ main.section {
 .footer-column ul li a:hover {
   color: #EC7C2D;
 }
+
+.site-footer .legal {
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.site-footer .legal a:hover {
+  text-decoration: underline;
+}
