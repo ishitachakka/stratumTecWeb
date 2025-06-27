@@ -29,7 +29,7 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  color: white;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -45,29 +45,29 @@ body {
 
 .hero-overlay {
   z-index: 1;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
   display: inline-block;
 }
 
 .hero-image {
-  height: 100px;
+  height: 120px;
 }
 
 .hero-slogan {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #EC7C2D;
-  margin: 0.2rem 0;
+  margin: 0.5rem 0;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  align-items: center; /* vertically centers items */
+  padding: 0.8rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
@@ -118,18 +118,17 @@ nav a,
   align-items: center;
   gap: 5px;
   padding: 0.4rem 0;
+  transition: color 0.3s ease;
 }
 
+nav a:hover,
+.dropbtn:hover {
+  color: #EC7C2D;
+}
+
+/* Dropdown */
 .dropdown {
   position: relative;
-}
-
-.arrow {
-  transition: transform 0.3s ease;
-}
-
-.dropdown.open .arrow {
-  transform: rotate(180deg);
 }
 
 .mega-dropdown-panel {
@@ -137,7 +136,9 @@ nav a,
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100vw;
+  width: auto;
+  min-width: 250px;
+  max-width: 800px;
   background-color: white;
   border-top: 1px solid #ddd;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -145,8 +146,6 @@ nav a,
 }
 
 .mega-dropdown-panel .mega-content {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   padding: 2rem 3rem;
@@ -173,11 +172,6 @@ nav a,
   background-color: #f5f5f5;
   color: #EC7C2D;
   padding-left: 0.25rem;
-}
-
-/* No hover-based display */
-.dropdown:hover .mega-dropdown-panel {
-  display: none !important;
 }
 
 /* Main Section */
@@ -216,21 +210,6 @@ main.section {
 }
 
 /* Quote Form */
-.quote-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: rgba(40, 38, 91, 0.05);
-  border-radius: 8px;
-  color: #28265B;
-}
-
-.quote-form h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #EC7C2D;
-}
-
 .quote-form form {
   display: flex;
   flex-direction: column;
@@ -273,9 +252,8 @@ main.section {
 
 .footer-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2rem;
 }
 

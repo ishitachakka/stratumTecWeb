@@ -11,7 +11,7 @@
 </head>
 
 <body class="page-wrapper">
-  <!-- HTML NAVBAR -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
       <a href="index.html" class="logo-link">
@@ -21,9 +21,9 @@
     </div>
 
     <nav>
-      <div class="dropdown" data-dropdown="products">
-        <button class="dropbtn">Products <span class="arrow">&#x25BC;</span></button>
-        <div class="mega-dropdown-panel" id="mega-products">
+      <div class="dropdown">
+        <button class="dropbtn">Products</button>
+        <div class="mega-dropdown-panel">
           <div class="mega-content">
             <h3>Products</h3>
             <a href="products.html#NCS">NCS</a>
@@ -31,9 +31,10 @@
           </div>
         </div>
       </div>
-      <div class="dropdown" data-dropdown="solutions">
-        <button class="dropbtn">Solutions <span class="arrow">&#x25BC;</span></button>
-        <div class="mega-dropdown-panel" id="mega-solutions">
+
+      <div class="dropdown">
+        <button class="dropbtn">Solutions</button>
+        <div class="mega-dropdown-panel">
           <div class="mega-content">
             <h3>Solutions</h3>
             <a href="#">Customer Journey</a>
@@ -45,9 +46,10 @@
           </div>
         </div>
       </div>
-      <div class="dropdown" data-dropdown="expertise">
-        <button class="dropbtn">Expertise <span class="arrow">&#x25BC;</span></button>
-        <div class="mega-dropdown-panel" id="mega-expertise">
+
+      <div class="dropdown">
+        <button class="dropbtn">Expertise</button>
+        <div class="mega-dropdown-panel">
           <div class="mega-content">
             <h3>Expertise</h3>
             <a href="#">Customer Journey Mapping</a>
@@ -58,25 +60,26 @@
           </div>
         </div>
       </div>
+
       <a href="about.html">Company</a>
       <a href="content.html">Insights & Trends</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section with Video and Slogan -->
-  <header class="hero">
+  <!-- HERO SECTION -->
+  <header class="hero" style="background-color: black;">
     <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
       <source src="assets/orangeTech.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <div class="hero-overlay" data-aos="fade-down">
+    <div class="hero-overlay" data-aos="fade-down" style="padding: 3rem;">
       <img src="assets/logo.png" alt="StratumTec Logo" class="hero-image" />
-      <p class="hero-slogan">Where Innovation Meets Excellence</p>
+      <p class="hero-slogan" style="font-size: 1.5rem;">Where Innovation Meets Excellence</p>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
   <main class="section">
     <div class="info-box">
       <h2>Featured Solutions</h2>
@@ -110,7 +113,7 @@
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
@@ -124,6 +127,7 @@
           performance across time zones.
         </p>
       </div>
+
       <div class="footer-right">
         <div class="footer-column">
           <h3>Company</h3>
@@ -150,7 +154,7 @@
         </div>
         <div class="footer-column">
           <h3>Expertise</h3>
-          <ul>
+          <ul style="max-width: 150px;">
             <li><a href="#">CX Mapping</a></li>
             <li><a href="#">Digital Transformation</a></li>
             <li><a href="#">VoC</a></li>
