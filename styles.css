@@ -119,11 +119,10 @@ nav.navbar {
   align-items: center;
   justify-content: flex-end;
   background: white;
-  padding: 0;
 }
 
 nav.navbar ul.menu {
-  list-style: none;
+  list-style: none; /* removes bullet points */
   display: flex;
   margin: 0;
   padding: 0;
@@ -184,7 +183,7 @@ nav.navbar ul.menu li a:hover {
 
 .menu-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* prevents overlapping */
   gap: 1rem;
   padding-left: 2rem;
 }
@@ -295,7 +294,7 @@ main.section {
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem; /* reduced side padding */
 }
 
 .footer-left {
@@ -318,7 +317,7 @@ main.section {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 3rem;
+  gap: 3rem; /* increased spacing between columns */
 }
 
 .footer-column {
