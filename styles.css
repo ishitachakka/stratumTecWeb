@@ -109,8 +109,10 @@ ul {
   padding: 0.8rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  width: 100%; /* add this */
+  top: 0; /* ensure it stays at top */
+  z-index: 1000;
 }
 
 .logo-block {
@@ -251,7 +253,7 @@ nav.navbar-nav ul.menu li a:hover {
 main.section {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding: 80px 2rem 0 2rem; /* Top padding adjusted for fixed navbar */
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -432,10 +434,11 @@ hr {
    ========================= */
 
 .page-banner {
-  background: url('assets/expertise-banner.jpg') center/cover no-repeat; /* replace with your banner image path */
+  background: linear-gradient(90deg, #EC7C2D, #28265B);
   color: white;
-  padding: 6rem 2rem 4rem 2rem;
   text-align: center;
+  margin-top: 4.5rem; /* adjust based on your navbar’s exact height */
+  padding: 4rem 2rem;
 }
 
 .page-banner h1 {
@@ -623,25 +626,6 @@ hr {
 
 .blog-content .consult-btn {
   align-self: flex-start;
-}
-
-/* =========================
-   PAGE BANNER GRADIENT
-   ========================= */
-.page-banner {
-  background: linear-gradient(90deg, #EC7C2D, #28265B);
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.page-banner h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-banner p {
-  font-size: 1.2rem;
 }
 
 /* =========================
