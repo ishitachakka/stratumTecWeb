@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratumTec | Insights & Trends</title>
+  <title>StratumTec | Insights e Tendências</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
@@ -14,44 +14,64 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
-      <a href="index.html" class="logo-link">
-        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
+      <a href="index.html" class="logo-link" data-en="indexE.html" data-pt="index.html">
+        <img src="assets/logo.png" alt="Logo StratumTec" class="logo-image" />
       </a>
-      <a href="insightsTrendsP.html" id="translate-btn" class="translate-link">português</a>
+      <a href="javascript:void(0);" id="translate-btn" class="translate-link">english</a>
     </div>
 
     <nav class="navbar-nav">
       <ul class="menu">
-        <li><a href="#" onclick="toggleMegaMenu('products-menu')">Products</a></li>
-        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Solutions</a></li>
-        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Expertise</a></li>
-        <li><a href="company.html">Company</a></li>
-        <li><a href="insightsTrends.html">Insights & Trends</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Especializações</a>
+        </li>
+        <li>
+          <a href="company.html" data-en="companyE.html" data-pt="company.html">Empresa</a>
+        </li>
+        <li>
+          <a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
+            Tendências</a>
+        </li>
+        <li>
+          <a href="contact.html" data-en="contactE.html" data-pt="contact.html">Contato</a>
+        </li>
       </ul>
     </nav>
 
     <!-- Mega Menus BELOW nav -->
     <div class="mega-menu-panel" id="products-menu">
       <div class="mega-menu-content">
-        <div class="menu-title">Products</div>
+        <div class="menu-title">Produtos</div>
         <div class="menu-options">
-          <a href="products.html#NCS">NCS</a>
-          <a href="products.html#BlueMesh">Blue Mesh</a>
+          <a href="products.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a>
+          <a href="products.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
+            Mesh</a>
         </div>
       </div>
     </div>
 
     <div class="mega-menu-panel" id="solutions-menu">
       <div class="mega-menu-content">
-        <div class="menu-title">Solutions</div>
+        <div class="menu-title">Soluções</div>
         <div class="menu-options">
-          <a href="solutions.html#CustomerJourney">Customer Journey</a>
-          <a href="solutions.html#Omnichannel">Omnichannel</a>
-          <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
-          <a href="solutions.html#Monetization">Monetization</a>
-          <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
-          <a href="solutions.html#IoTDevelopment">IoT Development</a>
+          <a href="solutions.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
+            data-pt="solutions.html#CustomerJourney">Jornada do Cliente</a>
+          <a href="solutions.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
+            data-pt="solutions.html#Omnichannel">Omnicanal</a>
+          <a href="solutions.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
+            data-pt="solutions.html#DataAnalytics">Análise de Dados | BI</a>
+          <a href="solutions.html#Monetization" data-en="solutionsE.html#Monetization"
+            data-pt="solutions.html#Monetization">Monetização</a>
+          <a href="solutions.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
+            data-pt="solutions.html#DevOpsIntegration">DevOps & Integração</a>
+          <a href="solutions.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
+            data-pt="solutions.html#IoTDevelopment">Desenvolvimento IoT</a>
         </div>
       </div>
     </div>
@@ -60,49 +80,54 @@
       <div class="mega-menu-content">
         <div class="menu-title">Expertise</div>
         <div class="menu-options">
-          <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
-          <a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
-          <a href="expertise.html#VoC">VoC</a>
-          <a href="expertise.html#Assessment">Assessment</a>
-          <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
+          <a href="expertise.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
+            data-pt="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a>
+          <a href="expertise.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
+            data-pt="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a>
+          <a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a>
+          <a href="expertise.html#Assessment" data-en="expertiseE.html#Assessment"
+            data-pt="expertise.html#Assessment">Avaliação</a>
+          <a href="expertise.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
+            data-pt="expertise.html#DigitalTransformation">Transformação Digital</a>
         </div>
       </div>
     </div>
+
   </header>
 
   <!-- PAGE BANNER -->
   <section class="page-banner" style="background-color: #EC7C2D; color: white; text-align: center; padding: 4rem 2rem;">
-    <h1>Insights & Trends</h1>
-    <p>Stay ahead with our latest perspectives on AI, Cloud, DevOps, and more.</p>
+    <h1>Insights e Tendências</h1>
+    <p>Mantenha-se à frente com nossas últimas perspectivas sobre IA, Nuvem, DevOps e mais.</p>
   </section>
 
   <!-- MAIN CONTENT -->
   <main class="section">
     <div class="insights-grid">
       <div class="blog-card" data-aos="fade-up">
-        <img src="assets/placeholder1.jpg" alt="AI in CX">
+        <img src="assets/placeholder1.jpg" alt="IA em CX">
         <div class="blog-content">
-          <h3>AI Transforming Customer Experience</h3>
-          <p>Explore how AI is revolutionizing customer engagement across sectors.</p>
-          <a href="#" class="consult-btn">Read More</a>
+          <h3>IA Transformando a Experiência do Cliente</h3>
+          <p>Descubra como a IA está revolucionando o engajamento do cliente em diversos setores.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
         </div>
       </div>
 
       <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/placeholder2.jpg" alt="DevOps Trends">
+        <img src="assets/placeholder2.jpg" alt="Tendências DevOps">
         <div class="blog-content">
-          <h3>DevOps Trends in 2025</h3>
-          <p>Discover modern frameworks and automation shaping DevOps this year.</p>
-          <a href="#" class="consult-btn">Read More</a>
+          <h3>Tendências de DevOps em 2025</h3>
+          <p>Descubra estruturas modernas e automações que moldam o DevOps neste ano.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
         </div>
       </div>
 
       <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/placeholder3.jpg" alt="Cloud Migration">
+        <img src="assets/placeholder3.jpg" alt="Migração para Nuvem">
         <div class="blog-content">
-          <h3>Effective Cloud Migration</h3>
-          <p>Learn the key strategies for successful cloud transitions in your business.</p>
-          <a href="#" class="consult-btn">Read More</a>
+          <h3>Migração para Nuvem Eficiente</h3>
+          <p>Conheça as estratégias principais para uma transição bem-sucedida para a nuvem.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
         </div>
       </div>
     </div>
@@ -112,54 +137,68 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
+        <img src="assets/logo.png" alt="Logo StratumTec" class="logo-image" />
         <p>
-          StratumTec delivers innovative IT solutions through a skilled global team and trusted partners. We help you
-          reduce costs, enhance value, and achieve operational excellence with scalable software, cloud platforms, and
-          AI-driven products like NCS and Blue Mesh.
+          A StratumTec oferece soluções de TI inovadoras por meio de uma equipe global qualificada e parceiros
+          confiáveis. Ajudamos você
+          a reduzir custos, aumentar valor e alcançar excelência operacional com softwares escaláveis, plataformas em
+          nuvem e
+          produtos com IA como NCS e Blue Mesh.
         </p>
       </div>
 
       <div class="footer-right">
         <div class="footer-column">
-          <h3>Company</h3>
+          <h3>Empresa</h3>
           <ul>
-            <li><a href="company.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="company.html" data-en="companyE.html" data-pt="company.html">Sobre</a></li>
+            <li><a href="contact.html" data-en="contactE.html" data-pt="contact.html">Contato</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Products</h3>
+          <h3>Produtos</h3>
           <ul>
-            <li><a href="products.html#NCS">NCS</a></li>
-            <li><a href="products.html#BlueMesh">Blue Mesh</a></li>
+            <li><a href="products.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
+                Mesh</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Solutions</h3>
+          <h3>Soluções</h3>
           <ul>
-            <li><a href="solutions.html#CustomerJourney">Customer Journey</a></li>
-            <li><a href="solutions.html#Omnichannel">Omnichannel</a></li>
-            <li><a href="solutions.html#DataAnalytics">Data Analytics | BI</a></li>
-            <li><a href="solutions.html#Monetization">Monetization</a></li>
-            <li><a href="solutions.html#DevOpsIntegration">DevOps & Integration</a></li>
-            <li><a href="solutions.html#IoTDevelopment">IoT Development</a></li>
+            <li><a href="solutions.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
+                data-pt="solutions.html#CustomerJourney">Jornada do Cliente</a></li>
+            <li><a href="solutions.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
+                data-pt="solutions.html#Omnichannel">Omnicanal</a></li>
+            <li><a href="solutions.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
+                data-pt="solutions.html#DataAnalytics">Análise de Dados | BI</a></li>
+            <li><a href="solutions.html#Monetization" data-en="solutionsE.html#Monetization"
+                data-pt="solutions.html#Monetization">Monetização</a></li>
+            <li><a href="solutions.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
+                data-pt="solutions.html#DevOpsIntegration">DevOps & Integração</a></li>
+            <li><a href="solutions.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
+                data-pt="solutions.html#IoTDevelopment">Desenvolvimento IoT</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Expertise</h3>
           <ul>
-            <li><a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a></li>
-            <li><a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a></li>
-            <li><a href="expertise.html#VoC">VoC</a></li>
-            <li><a href="expertise.html#Assessment">Assessment</a></li>
-            <li><a href="expertise.html#DigitalTransformation">Digital Transformation</a></li>
+            <li><a href="expertise.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
+                data-pt="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
+                data-pt="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a></li>
+            <li><a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a></li>
+            <li><a href="expertise.html#Assessment" data-en="expertiseE.html#Assessment"
+                data-pt="expertise.html#Assessment">Avaliação</a></li>
+            <li><a href="expertise.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
+                data-pt="expertise.html#DigitalTransformation">Transformação Digital</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Insights</h3>
           <ul>
-            <li><a href="insightsTrends.html">Insights & Trends</a></li>
+            <li><a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights e
+                Tendências</a></li>
           </ul>
         </div>
       </div>
@@ -167,7 +206,8 @@
 
     <hr>
     <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
-      © 2025 StratumTec. All rights reserved. | <a href="privacy.html" style="color: #EC7C2D;">Privacy Policy</a> | <a href="terms.html" style="color: #EC7C2D;">Terms of Service</a>
+      © 2025 StratumTec. Todos os direitos reservados. | <a href="privacy.html" style="color: #EC7C2D;">Política de
+        Privacidade</a> | <a href="terms.html" style="color: #EC7C2D;">Termos de Serviço</a>
     </p>
   </footer>
 
