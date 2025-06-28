@@ -7,81 +7,128 @@
   <title>StratumTec</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-wrapper">
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
-      <a href="index.html" class="logo">StratumTec</a>
+      <a href="indexP.html" class="logo-link">
+        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
+      </a>
       <a href="index.html" id="translate-btn" class="translate-link">english</a>
     </div>
-    <nav>
-      <a href="products.html">Produtos</a>
-      <div class="dropdown">
-        <a class="dropbtn">
-          Especializações <span class="arrow">▼</span>
-        </a>
-        <div class="dropdown-content">
-          <a href="product-development.html">Desenvolvimento de Produtos</a>
-          <a href="cloud-solutions.html">Soluções em Nuvem</a>
-          <a href="devops-and-integration.html">DevOps & Integrações</a>
+
+    <nav class="navbar-nav">
+      <ul class="menu">
+        <li>
+          <a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Especializações</a>
+        </li>
+        <li><a href="company.html">Empresa</a></li>
+        <li><a href="insightsTrends.html">Insights & Tendências</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mega Menus BELOW nav -->
+    <div class="mega-menu-panel" id="products-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Produtos</div>
+        <div class="menu-options">
+          <a href="products.html#NCS">NCS</a>
+          <a href="products.html#BlueMesh">Blue Mesh</a>
         </div>
       </div>
-      <a href="company.html">Empresa</a>
-    </nav>
-  </header>
+    </div>
 
-  <!-- Hero Section with Video and Slogan -->
-  <header class="hero">
-    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/tealTech.mp4" type="video/mp4" />
-      Seu navegador não suporta o elemento de vídeo.
-    </video>
-    <div class="hero-overlay" data-aos="fade-down">
-      <h1 class="hero-logo">StratumTec</h1>
-      <p class="hero-slogan">Onde Inovação Significa Excelência</p>
+    <div class="mega-menu-panel" id="solutions-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Soluções</div>
+        <div class="menu-options">
+          <a href="solutions.html#CustomerJourney">Jornada do Cliente</a>
+          <a href="solutions.html#Omnichannel">Omnicanal</a>
+          <a href="solutions.html#DataAnalytics">Análise de Dados | BI</a>
+          <a href="solutions.html#Monetization">Monetização</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps & Integração</a>
+          <a href="solutions.html#IoTDevelopment">Desenvolvimento IoT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="expertise-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Especializações</div>
+        <div class="menu-options">
+          <a href="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a>
+          <a href="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a>
+          <a href="expertise.html#VoC">Voz do Cliente (VoC)</a>
+          <a href="expertise.html#Assessment">Avaliação</a>
+          <a href="expertise.html#DigitalTransformation">Transformação Digital</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/orangeTech.mp4" type="video/mp4" />
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <div class="hero-overlay">
+      <img src="assets/logo.png" alt="StratumTec Logo" class="hero-image" />
+      <p class="hero-slogan">Onde Inovação Significa Excelência</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
   <main class="section">
-    <div>
-      <h2>Seu Parceiro em Soluções Inteligentes de TI</h2>
-      <p>Na Stratum Technologies, priorizamos entender as necessidades e desafios únicos do seu negócio. Nossa equipe de
-        especialistas oferece soluções de TI escaláveis, personalizadas e com ótimo custo-benefício, alinhadas aos seus objetivos operacionais. Combinamos profundo conhecimento técnico com um serviço personalizado para garantir o sucesso duradouro de nossos clientes.</p>
+    <div class="info-box">
+      <h2>Soluções em Destaque</h2>
+      <p>Explore nossos produtos e serviços mais procurados.</p>
+      <a href="solutions.html" class="consult-btn">Explorar</a>
+    </div>
+
+    <div class="info-box">
+      <h2>Nossos Parceiros</h2>
+      <div class="partner-carousel">
+        <!-- Adicionar logotipos ou placeholders -->
+      </div>
+    </div>
+
+    <div class="info-box quote-form">
+      <h2>Solicitar Orçamento</h2>
+      <form action="mailto:contact@stratumtec.com" method="POST">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="info-box">
+      <h2>Últimos Insights & Tendências</h2>
+      <div class="post-grid">
+        <!-- Adicionar prévias de posts -->
+      </div>
+      <a href="blog.html" class="consult-btn">Ver Mais</a>
     </div>
   </main>
 
-  <!-- Expertise Cards Section -->
-  <section class="expertise">
-    <h2>Nossas Especializações</h2>
-    <div class="container-cards">
-      <div class="expertise-card" data-aos="fade-right">
-        <h3>Desenvolvimento de Produtos</h3>
-        <p>Criamos produtos robustos e escaláveis, do conceito ao lançamento, com foco na experiência do usuário e no valor do negócio.</p>
-        <a href="product-development.html">Saiba Mais</a>
-      </div>
-      <div class="expertise-card" data-aos="fade-up">
-        <h3>Soluções em Nuvem</h3>
-        <p>Implementamos infraestruturas e serviços em nuvem seguros e eficientes, permitindo que sua empresa aproveite o poder da nuvem em escala.</p>
-        <a href="cloud-solutions.html">Saiba Mais</a>
-      </div>
-      <div class="expertise-card" data-aos="fade-left">
-        <h3>DevOps & Integrações</h3>
-        <p>Automatizamos fluxos de trabalho e integramos sistemas para otimizar o desenvolvimento e a implantação, aumentando a eficiência e agilidade da sua equipe.</p>
-        <a href="devops-and-integration.html">Saiba Mais</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <h2>StratumTec</h2>
+        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
         <p>
-          A StratumTec oferece soluções de TI inovadoras e confiáveis globalmente, por meio de uma equipe qualificada e parceiros de confiança. Reduzimos custos de desenvolvimento e aumentamos o valor por meio de serviços de software de alta qualidade, plataformas em nuvem escaláveis e suporte estratégico. Nossas soluções incluem desenvolvimento de produtos, DevOps, IoT, consultoria e plataformas modernas como o NCS para comunicação VoIP e o Blue Mesh para integração de IA — garantindo flexibilidade, confiabilidade e desempenho em todos os fusos horários.
+          A StratumTec oferece soluções de TI inovadoras por meio de uma equipe global qualificada e parceiros confiáveis. Ajudamos você a reduzir custos, aumentar o valor e alcançar a excelência operacional com software escalável, plataformas em nuvem e produtos com IA como NCS e Blue Mesh.
         </p>
       </div>
 
@@ -89,44 +136,57 @@
         <div class="footer-column">
           <h3>Empresa</h3>
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">História</a></li>
-            <li><a href="#">Fale Conosco</a></li>
-            <li><a href="#">Eventos</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Especializações</h3>
-          <ul>
-            <li><a href="#">Soluções em Nuvem</a></li>
-            <li><a href="#">DevOps & Integrações</a></li>
-            <li><a href="#">Desenvolvimento de Produtos</a></li>
+            <li><a href="company.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Produtos</h3>
           <ul>
-            <li><a href="#">NCS</a></li>
-            <li><a href="#">Bluemesh</a></li>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">Blue Mesh</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Recursos</h3>
+          <h3>Soluções</h3>
           <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="solutions.html#CustomerJourney">Jornada do Cliente</a></li>
+            <li><a href="solutions.html#Omnichannel">Omnicanal</a></li>
+            <li><a href="solutions.html#DataAnalytics">Análise de Dados | BI</a></li>
+            <li><a href="solutions.html#Monetization">Monetização</a></li>
+            <li><a href="solutions.html#DevOpsIntegration">DevOps & Integração</a></li>
+            <li><a href="solutions.html#IoTDevelopment">Desenvolvimento IoT</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Especializações</h3>
+          <ul>
+            <li><a href="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a></li>
+            <li><a href="expertise.html#VoC">Voz do Cliente (VoC)</a></li>
+            <li><a href="expertise.html#Assessment">Avaliação</a></li>
+            <li><a href="expertise.html#DigitalTransformation">Transformação Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Insights</h3>
+          <ul>
+            <li><a href="insightsTrends.html">Insights & Tendências</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <hr>
+    <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
+      © 2025 StratumTec. Todos os direitos reservados. | <a href="privacy.html" style="color: #EC7C2D;">Política de Privacidade</a> | <a href="terms.html" style="color: #EC7C2D;">Termos de Serviço</a>
+    </p>
   </footer>
 
   <!-- Scripts -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="navbar.js"></script>
 </body>
 
 </html>

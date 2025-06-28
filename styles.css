@@ -51,7 +51,7 @@ ul {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: none; 
+  z-index: 0;
 }
 
 .hero-video {
@@ -61,7 +61,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -78,8 +78,24 @@ ul {
 .hero-slogan {
   font-size: 1.5rem;
   font-weight: 400;
-  color: white;
+  color: #28265B; /* or any readable dark color */
   margin: 0.5rem 0;
+}
+/* =========================
+   HERO BANNER BELOW INFO BOX
+   ========================= */
+
+.hero-banner {
+  width: 100vw;        /* Full screen width */
+  margin-left: calc(-50vw + 50%); /* Break out of center container */
+  overflow: hidden;
+  padding: 2rem 0;      /* Keep your vertical spacing */
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =========================
@@ -176,39 +192,55 @@ nav.navbar-nav ul.menu li a:hover {
 
 .mega-menu-content {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 2rem;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .menu-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: #EC7C2D;
-  border-right: 2px solid #EC7C2D;
-  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  padding-right: 2.5rem; /* ⬅ increased spacing before the bar */
+  margin-left: 0.5rem;    /* ⬅ optional: shifts label slightly right for visual balance */
+}
+
+.menu-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #EC7C2D;
 }
 
 .menu-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  padding-left: 2rem;
+  grid-template-columns: repeat(3, 1fr);  /* ← even 3-column layout */
+  gap: 1.5rem 2rem;
 }
 
 .menu-options a {
   display: block;
-  padding: 0.75rem 0; /* increased top-bottom padding for spacing */
-  color: #28265B;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
   text-decoration: none;
-  transition: color 0.3s ease;
-  white-space: nowrap;
+  color: #28265B;
+  transition: 0.2s ease;
+  text-align: center;
 }
 
 .menu-options a:hover {
+  border-color: #EC7C2D;
   color: #EC7C2D;
 }
 
@@ -292,25 +324,44 @@ main.section {
    ========================= */
 
 .site-footer {
-  background-color: #28265B;
-  color: white;
+  background-color: #fff; /* white background like navbar */
+  color: #28265B; /* navy blue text */
   padding: 3rem 2rem;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  gap: 2.5rem;
-  max-width: 1200px;
+  gap: 2rem;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 0.5rem; /* reduced side padding further */
+  padding: 0 1rem; /* reduced from 1.5rem to create extra space */
+  overflow-x: hidden;
 }
 
 .footer-left {
+  flex: 1; /* slightly increased for wider left column */
+  min-width: 250px;
+  max-width: 380px; /* expanded maximum width for readability */
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem; /* slightly reduced gap to keep within viewport */
+  flex: 3;
+}
+
+.footer-column {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
+  max-width: 240px; /* increased from 220px to ensure last column words fit nicely */
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer-left h2 {
@@ -319,26 +370,14 @@ main.section {
 }
 
 .footer-left p {
-  color: #ccc;
+  color: #28265B;
+  font-size: 0.95rem;
   line-height: 1.6;
   max-width: 500px;
 }
 
-.footer-right {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 3rem; /* spacing between columns */
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 180px;
-  max-width: 240px;
-}
-
 .footer-column h3 {
-  color: #EC7C2D;
+  color: #EC7C2D; /* orange headers */
   margin-bottom: 0.5rem;
 }
 
@@ -346,6 +385,7 @@ main.section {
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-right: 0.2rem;
 }
 
 .footer-column ul li {
@@ -353,20 +393,21 @@ main.section {
 }
 
 .footer-column ul li a {
-  color: white;
+  color: #28265B; /* navy text */
   text-decoration: none;
   transition: color 0.3s ease;
   word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer-column ul li a:hover {
-  color: #EC7C2D;
+  color: #EC7C2D; /* hover to orange */
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(40, 38, 91, 0.2); /* subtle navy divider */
   margin: 2rem 0;
 }
 
@@ -375,12 +416,252 @@ hr {
   text-align: center;
   line-height: 1.6;
   font-size: 0.8rem;
+  color: #28265B; /* navy text */
 }
 
 .site-footer .legal a {
-  color: #EC7C2D;
+  color: #EC7C2D; /* orange links */
 }
 
 .site-footer .legal a:hover {
   text-decoration: underline;
+}
+
+/* =========================
+   PAGE BANNER
+   ========================= */
+
+.page-banner {
+  background: url('assets/expertise-banner.jpg') center/cover no-repeat; /* replace with your banner image path */
+  color: white;
+  padding: 6rem 2rem 4rem 2rem;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =========================
+   EXPERTISE GRID & CARDS
+   ========================= */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.expertise-card {
+  background: #28265B; /* navy blue background */
+  color: white; /* text color for contrast */
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.expertise-card h2 {
+  margin-bottom: 1rem;
+  color: #EC7C2D; /* orange accent */
+}
+
+/* =========================
+   CTA SECTION
+   ========================= */
+
+.cta-section {
+  background: #EC7C2D; /* orange */
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #28265B; /* navy blue */
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+}
+
+.contact-info h2 {
+  margin-bottom: 0.5rem;
+  color: #EC7C2D; /* orange heading */
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+}
+
+.contact-details a {
+  color: #EC7C2D; /* orange links */
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 1 1 50%;
+}
+
+.contact-form h3 {
+  margin-bottom: 1rem;
+  color: #EC7C2D; /* orange subheading */
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.9); /* light input field for contrast */
+  color: #28265B; /* navy blue text inside inputs */
+}
+
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder {
+  color: #666; /* darker placeholder text */
+}
+
+.contact-form form button {
+  background-color: #EC7C2D; /* orange button */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form form button:hover {
+  background-color: #cf6623; /* darker orange on hover */
+}
+
+/* =========================
+   INSIGHTS GRID & BLOG CARDS
+   ========================= */
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #28265B;
+}
+
+.blog-content p {
+  flex: 1;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  color: #555;
+}
+
+.blog-content .consult-btn {
+  align-self: flex-start;
+}
+
+/* =========================
+   PAGE BANNER GRADIENT
+   ========================= */
+.page-banner {
+  background: linear-gradient(90deg, #EC7C2D, #28265B);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.page-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   CTA SECTION (Optional Future Use)
+   ========================= */
+
+.cta-section {
+  background-color: #EC7C2D;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1rem;
 }

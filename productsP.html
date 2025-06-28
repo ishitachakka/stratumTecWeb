@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StratumTec</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StratumTec | Produtos</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="page-wrapper">
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
-      <a href="index.html" class="logo">StratumTec</a>
+      <a href="indexP.html" class="logo-link">
+        <img src="assets/logo.png" alt="Logotipo StratumTec" class="logo-image" />
+      </a>
       <a href="products.html" id="translate-btn" class="translate-link">english</a>
     </div>
-    <nav>
-      <a href="products.html">Produtos</a>
-      <div class="dropdown">
-        <a class="dropbtn">
-          Especializações <span class="arrow">▼</span>
-        </a>
-        <div class="dropdown-content">
-          <a href="product-development.html">Desenvolvimento de Produtos</a>
-          <a href="cloud-solutions.html">Soluções em Nuvem</a>
-          <a href="devops-and-integration.html">DevOps & Integrações</a>
-        </div>
-      </div>
-      <a href="company.html">Empresa</a>
+
+    <nav class="navbar-nav">
+      <ul class="menu">
+        <li><a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Especialidade</a></li>
+        <li><a href="companyP.html">Empresa</a></li>
+        <li><a href="insightsTrendsP.html">Insights & Tendências</a></li>
+        <li><a href="contactP.html">Contato</a></li>
+      </ul>
     </nav>
+
+    <!-- Mega Menus -->
+    <div class="mega-menu-panel" id="products-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Produtos</div>
+        <div class="menu-options">
+          <a href="productsP.html#NCS">NCS</a>
+          <a href="productsP.html#BlueMesh">Blue Mesh</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="solutions-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Soluções</div>
+        <div class="menu-options">
+          <a href="solutionsP.html#CustomerJourney">Jornada do Cliente</a>
+          <a href="solutionsP.html#Omnichannel">Omnicanal</a>
+          <a href="solutionsP.html#DataAnalytics">Análise de Dados | BI</a>
+          <a href="solutionsP.html#Monetization">Monetização</a>
+          <a href="solutionsP.html#DevOpsIntegration">DevOps e Integração</a>
+          <a href="solutionsP.html#IoTDevelopment">Desenvolvimento IoT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="expertise-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Especialidade</div>
+        <div class="menu-options">
+          <a href="expertiseP.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a>
+          <a href="expertiseP.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a>
+          <a href="expertiseP.html#VoC">Voz do Cliente</a>
+          <a href="expertiseP.html#Assessment">Avaliação</a>
+          <a href="expertiseP.html#DigitalTransformation">Transformação Digital</a>
+        </div>
+      </div>
+    </div>
   </header>
-  
-  <!-- Main Content -->
+
+  <!-- MAIN CONTENT -->
   <main class="section">
-    <!-- NCS Section -->
-    <section class="product-section">
-      <div class="product-box reverse">
-        <img src="assets/com.png" alt="Plataforma NCS" class="product-image" />
-        <div class="product-content">
-          <h3>NCS</h3>
-          <p>
-            O Netstratum Communication Suite oferece uma ampla gama de recursos de comunicação unificada, adaptados para o trabalho moderno — incluindo reuniões por vídeo, mensagens, mobilidade e colaboração. O NCS é projetado para escalabilidade em ambientes de nuvem privada e pública, preservando sua infraestrutura atual e capacitando contact centers e equipes distribuídas em todo o mundo.
-          </p>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Blue Mesh Section -->
-    <section class="product-section">
-      <div class="product-box">
-        <img src="assets/mesh.png" alt="Plataforma Blue Mesh" class="product-image" />
-        <div class="product-content">
-          <h3>Blue Mesh</h3>
-          <p>
-            O Blue Mesh fornece uma plataforma de IA segura e privada com uma abordagem Human-in-the-Loop. Ele traz automação inteligente para seus fluxos de trabalho, mantendo a supervisão humana no centro. Projetado para precisão, conformidade e impacto no mundo real.
-          </p>
-          <a href="https://bluemesh.ai/" target="_blank">Saiba Mais</a>
-        </div>
-      </div>
-    </section>
+    <!-- NCS Product Section -->
+    <div class="info-box" id="NCS">
+      <h2>NCS</h2>
+      <p>
+        A Netstratum Communication Suite oferece uma ampla gama de recursos de comunicação unificada para o trabalho moderno — incluindo reuniões por vídeo, mensagens, mobilidade e colaboração. O NCS foi desenvolvido para escalabilidade em ambientes de nuvem privada e pública, preservando sua infraestrutura atual e capacitando contact centers e equipes distribuídas globalmente.
+      </p>
+      <img src="assets/com.png" alt="Plataforma NCS" class="product-image" />
+    </div>
+
+    <!-- Blue Mesh Product Section -->
+    <div class="info-box" id="BlueMesh">
+      <h2>Blue Mesh</h2>
+      <p>
+        O Blue Mesh fornece uma plataforma de IA privada e segura com uma abordagem Human-in-the-Loop. Traz automação inteligente para seus fluxos de trabalho mantendo a supervisão humana central. Projetado para precisão, conformidade e impacto no mundo real.
+      </p>
+      <img src="assets/mesh.png" alt="Plataforma Blue Mesh" class="product-image" />
+      <br />
+      <a href="https://bluemesh.ai/" target="_blank" class="consult-btn">Saiba Mais</a>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <h2>StratumTec</h2>
+        <img src="assets/logo.png" alt="Logotipo StratumTec" class="logo-image" />
         <p>
-          A StratumTec oferece soluções de TI inovadoras e confiáveis globalmente por meio de uma equipe qualificada 
-          e parceiros de confiança. Reduzimos os custos de desenvolvimento e aumentamos o valor por meio de serviços 
-          de software de alta qualidade, plataformas de nuvem escaláveis e suporte estratégico. Nossas soluções incluem 
-          desenvolvimento de produtos, DevOps, IoT, consultoria e plataformas modernas como o NCS para comunicação VoIP 
-          e o Blue Mesh para integração de IA — garantindo flexibilidade, confiabilidade e desempenho em todos os fusos horários.
+          A StratumTec entrega soluções de TI inovadoras através de uma equipe global qualificada e parceiros confiáveis. Ajudamos você a reduzir custos, aumentar valor e alcançar excelência operacional com software escalável, plataformas em nuvem e produtos com IA como NCS e Blue Mesh.
         </p>
       </div>
 
@@ -77,38 +107,56 @@
         <div class="footer-column">
           <h3>Empresa</h3>
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">História</a></li>
-            <li><a href="#">Fale Conosco</a></li>
-            <li><a href="#">Eventos</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Especializações</h3>
-          <ul>
-            <li><a href="#">Soluções em Nuvem</a></li>
-            <li><a href="#">DevOps & Integrações</a></li>
-            <li><a href="#">Desenvolvimento de Produtos</a></li>
+            <li><a href="companyP.html">Sobre</a></li>
+            <li><a href="contactP.html">Contato</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Produtos</h3>
           <ul>
-            <li><a href="#">NCS</a></li>
-            <li><a href="#">Bluemesh</a></li>
+            <li><a href="productsP.html#NCS">NCS</a></li>
+            <li><a href="productsP.html#BlueMesh">Blue Mesh</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Recursos</h3>
+          <h3>Soluções</h3>
           <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="solutionsP.html#CustomerJourney">Jornada do Cliente</a></li>
+            <li><a href="solutionsP.html#Omnichannel">Omnicanal</a></li>
+            <li><a href="solutionsP.html#DataAnalytics">Análise de Dados | BI</a></li>
+            <li><a href="solutionsP.html#Monetization">Monetização</a></li>
+            <li><a href="solutionsP.html#DevOpsIntegration">DevOps e Integração</a></li>
+            <li><a href="solutionsP.html#IoTDevelopment">Desenvolvimento IoT</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Especialidade</h3>
+          <ul>
+            <li><a href="expertiseP.html#CustomerJourneyMapping">Mapeamento da Jornada</a></li>
+            <li><a href="expertiseP.html#CustomerExperienceProcess">Processo CX</a></li>
+            <li><a href="expertiseP.html#VoC">Voz do Cliente</a></li>
+            <li><a href="expertiseP.html#Assessment">Avaliação</a></li>
+            <li><a href="expertiseP.html#DigitalTransformation">Transformação Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Insights</h3>
+          <ul>
+            <li><a href="insightsTrendsP.html">Insights & Tendências</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <hr>
+    <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
+      © 2025 StratumTec. Todos os direitos reservados. | <a href="privacy.html" style="color: #EC7C2D;">Política de Privacidade</a> | <a href="terms.html" style="color: #EC7C2D;">Termos de Serviço</a>
+    </p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="navbar.js"></script>
 </body>
 </html>

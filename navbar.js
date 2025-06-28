@@ -15,3 +15,4 @@ document.addEventListener('click', function(e) {
     document.querySelectorAll('.mega-menu-panel').forEach(menu => menu.style.display = 'none');
   }
 });
+

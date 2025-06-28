@@ -20,51 +20,61 @@
       <a href="productsP.html" id="translate-btn" class="translate-link">português</a>
     </div>
 
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown('products')">Products</button>
-        <div class="mega-dropdown-panel" id="products">
-          <div class="mega-content">
-            <h3>Products</h3>
-            <a href="#NCS">NCS</a>
-            <a href="#BlueMesh">Blue Mesh</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown('solutions')">Solutions</button>
-        <div class="mega-dropdown-panel" id="solutions">
-          <div class="mega-content">
-            <h3>Solutions</h3>
-            <a href="solutions.html#CustomerJourney">Customer Journey</a>
-            <a href="solutions.html#Omnichannel">Omnichannel</a>
-            <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
-            <a href="solutions.html#Monetization">Monetization</a>
-            <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
-            <a href="solutions.html#IoTDevelopment">IoT Development</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown('expertise')">Expertise</button>
-        <div class="mega-dropdown-panel" id="expertise">
-          <div class="mega-content">
-            <h3>Expertise</h3>
-            <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
-            <a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
-            <a href="expertise.html#VoC">VoC</a>
-            <a href="expertise.html#Assessment">Assessment</a>
-            <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
-          </div>
-        </div>
-      </div>
-
-      <a href="company.html">Company</a>
-      <a href="insightsTrends.html">Insights & Trends</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar-nav">
+      <ul class="menu">
+        <li>
+          <a href="#" onclick="toggleMegaMenu('products-menu')">Products</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('solutions-menu')">Solutions</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Expertise</a>
+        </li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="insightsTrends.html">Insights & Trends</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+
+    <!-- Mega Menus BELOW nav -->
+    <div class="mega-menu-panel" id="products-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Products</div>
+        <div class="menu-options">
+          <a href="products.html#NCS">NCS</a>
+          <a href="products.html#BlueMesh">Blue Mesh</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="solutions-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Solutions</div>
+        <div class="menu-options">
+          <a href="solutions.html#CustomerJourney">Customer Journey</a>
+          <a href="solutions.html#Omnichannel">Omnichannel</a>
+          <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
+          <a href="solutions.html#Monetization">Monetization</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
+          <a href="solutions.html#IoTDevelopment">IoT Development</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="expertise-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Expertise</div>
+        <div class="menu-options">
+          <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
+          <a href="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
+          <a href="expertise.html#VoC">VoC</a>
+          <a href="expertise.html#Assessment">Assessment</a>
+          <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
+        </div>
+      </div>
+    </div>
+
   </header>
 
   <!-- MAIN CONTENT -->
@@ -99,7 +109,7 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <h2>StratumTec</h2>
+        <img src="assets/logo.png" alt="StratumTec Logo" class="logo-image" />
         <p>
           StratumTec delivers innovative IT solutions through a skilled global team and trusted partners. We help you
           reduce costs, enhance value, and achieve operational excellence with scalable software, cloud platforms, and
@@ -118,8 +128,8 @@
         <div class="footer-column">
           <h3>Products</h3>
           <ul>
-            <li><a href="#NCS">NCS</a></li>
-            <li><a href="#BlueMesh">Blue Mesh</a></li>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">Blue Mesh</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -153,8 +163,9 @@
     </div>
 
     <hr>
-    <p class="legal">
-      © 2025 StratumTec. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+    <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
+      © 2025 StratumTec. All rights reserved. | <a href="privacy.html" style="color: #EC7C2D;">Privacy Policy</a> | <a
+        href="terms.html" style="color: #EC7C2D;">Terms of Service</a>
     </p>
   </footer>
 
