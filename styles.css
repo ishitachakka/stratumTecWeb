@@ -176,20 +176,12 @@ nav.navbar-nav ul.menu li a:hover {
 
 .mega-menu-content {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem;
-  padding: 2rem 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start;
+  grid-template-columns: min-content 1fr; /* more consistent width for title */
+  align-items: start; /* ensures top alignment */
 }
 
 .menu-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #EC7C2D;
-  border-right: 2px solid #EC7C2D;
-  padding-right: 2rem;
+  padding-top: 0.75rem; /* aligns with menu items vertically */
 }
 
 .menu-options {
