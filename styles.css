@@ -175,13 +175,23 @@ nav.navbar-nav ul.menu li a:hover {
 }
 
 .mega-menu-content {
-  display: grid;
-  grid-template-columns: min-content 1fr; /* more consistent width for title */
-  align-items: start; /* ensures top alignment */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* center the whole block */
+  gap: 2rem;
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-title {
-  padding-top: 0.75rem; /* aligns with menu items vertically */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #EC7C2D;
+  border-right: 2px solid #EC7C2D;
+  padding-right: 2rem;
+  padding-top: 0.4rem; /* vertical alignment fix */
+  flex-shrink: 0;
 }
 
 .menu-options {
