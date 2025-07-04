@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="page-wrapper" style="background-color: #000;">
+<body class="page-wrapper">
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
@@ -92,43 +92,47 @@
         </div>
       </div>
     </div>
-
   </header>
 
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Nossas Soluções</h1>
+      <p>Descubra como nossas soluções impulsionam o sucesso dos nossos clientes.</p>
+    </div>
+  </section>
+
   <!-- MAIN CONTENT -->
-  <main class="section">
-    <div class="info-box" id="CustomerJourney">
+  <main class="section expertise-grid">
+    <div class="expertise-card" id="CustomerJourney" data-aos="fade-up">
       <h2>Jornada do Cliente</h2>
       <p>Mapeie e otimize as jornadas do cliente para melhorar a satisfação e os resultados de negócios.</p>
     </div>
 
-    <div class="info-box" id="Omnichannel">
+    <div class="expertise-card" id="Omnichannel" data-aos="fade-up">
       <h2>Omnicanal</h2>
       <p>Ofereça experiências consistentes e integradas em diversos pontos de contato com o cliente.</p>
     </div>
 
-    <div class="info-box" id="DataAnalytics">
+    <div class="expertise-card" id="DataAnalytics" data-aos="fade-up">
       <h2>Análise de Dados | BI</h2>
       <p>Obtenha insights acionáveis com nossas soluções avançadas de análise de dados e inteligência de negócios.</p>
     </div>
 
-    <div class="info-box" id="Monetization">
+    <div class="expertise-card" id="Monetization" data-aos="fade-up">
       <h2>Monetização</h2>
       <p>Desbloqueie novas fontes de receita e otimize as existentes com soluções estratégicas de monetização.</p>
     </div>
 
-    <div class="info-box" id="DevOpsIntegration">
+    <div class="expertise-card" id="DevOpsIntegration" data-aos="fade-up">
       <h2>DevOps e Integração</h2>
       <p>Otimize pipelines de desenvolvimento e implantação com serviços robustos de DevOps e integração.</p>
     </div>
 
-    <div class="hero-banner">
-      <img src="assets/Herobanner.svg" alt="Clientes Confiáveis Banner" class="hero-banner-img" />
-    </div>
-
-    <div class="info-box" id="IoTDevelopment">
+    <div class="expertise-card" id="IoTDevelopment" data-aos="fade-up">
       <h2>Desenvolvimento de IoT</h2>
-      <p>Projete, desenvolva e implemente soluções de IoT seguras para conectar seu ecossistema empresarial com eficiência.</p>
+      <p>Projete, desenvolva e implemente soluções de IoT seguras para conectar seu ecossistema empresarial com
+        eficiência.</p>
     </div>
   </main>
 
@@ -139,10 +143,8 @@
         <img src="assets/logo.png" alt="Logo StratumTec" class="logo-image" />
         <p>
           A StratumTec oferece soluções de TI inovadoras por meio de uma equipe global qualificada e parceiros
-          confiáveis. Ajudamos você
-          a reduzir custos, aumentar valor e alcançar excelência operacional com softwares escaláveis, plataformas em
-          nuvem e
-          produtos com IA como NCS e Blue Mesh.
+          confiáveis. Ajudamos você a reduzir custos, aumentar valor e alcançar excelência operacional com softwares
+          escaláveis, plataformas em nuvem e produtos com IA como NCS e Blue Mesh.
         </p>
       </div>
 
@@ -205,8 +207,7 @@
 
     <hr>
     <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
-      © 2025 StratumTec. Todos os direitos reservados. | <a href="privacy.html" style="color: #EC7C2D;">Política de
-        Privacidade</a> | <a href="terms.html" style="color: #EC7C2D;">Termos de Serviço</a>
+      © 2025 StratumTec. Todos os direitos reservados.
     </p>
   </footer>
 
@@ -214,6 +215,9 @@
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="navbar.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

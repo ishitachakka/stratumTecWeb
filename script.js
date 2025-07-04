@@ -5,26 +5,29 @@ AOS.init();
 // LANGUAGE PREFERENCE LOGIC
 // =========================
 
-// Define page mapping
+// Define page mapping (PT ➔ EN)
 const pageMap = {
-  '/indexE.html': '/index.html',
-  '/companyE.html': '/company.html',
-  '/contactE.html': '/contact.html',
-  '/productsE.html': '/products.html',
-  '/solutionsE.html': '/solutions.html',
-  '/expertiseE.html': '/expertise.html',
-  '/insightsTrendsE.html': '/insightsTrends.html'
+  '/index.html': '/indexE.html',
+  '/company.html': '/companyE.html',
+  '/contact.html': '/contactE.html',
+  '/products.html': '/productsE.html',
+  '/solutions.html': '/solutionsE.html',
+  '/expertise.html': '/expertiseE.html',
+  '/insightsTrends.html': '/insightsTrendsE.html'
 };
 
-// Reverse mapping for EN -> PT
+// Reverse mapping (EN ➔ PT)
 const reversePageMap = {};
-for (const [en, pt] of Object.entries(pageMap)) {
-  reversePageMap[pt] = en;
+for (const [pt, en] of Object.entries(pageMap)) {
+  reversePageMap[en] = pt;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   let lang = localStorage.getItem('siteLanguage');
   const currentPage = window.location.pathname;
+
+  // DEBUG LOGS
+  console.log(`Current page: ${currentPage}, Language: ${lang}`);
 
   // If language not set, default to 'pt' and set it
   if (!lang) {
@@ -32,32 +35,17 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('siteLanguage', 'pt');
   }
 
-  // If on PT page but language is EN, redirect to EN equivalent
-  if (lang === 'en' && reversePageMap[currentPage]) {
+  // Redirect to match stored language preference
+  if (lang === 'en' && pageMap[currentPage]) {
+    window.location.href = pageMap[currentPage];
+    return;
+  }
+  if (lang === 'pt' && reversePageMap[currentPage]) {
     window.location.href = reversePageMap[currentPage];
     return;
   }
 
-  // If on EN page but language is PT, redirect to PT equivalent
-  if (lang === 'pt' && pageMap[currentPage]) {
-    window.location.href = pageMap[currentPage];
-    return;
-  }
-
-  // Update all links based on language
-  document.querySelectorAll('a[data-en]').forEach(link => {
-    const target = lang === 'en' ? link.getAttribute('data-en') : link.getAttribute('data-pt');
-    if (target) link.setAttribute('href', target);
-  });
-
-  // Update logo link
-  const logoLink = document.querySelector('.logo-link[data-en]');
-  if (logoLink) {
-    const target = lang === 'en' ? logoLink.getAttribute('data-en') : logoLink.getAttribute('data-pt');
-    if (target) logoLink.setAttribute('href', target);
-  }
-
-  // Update translate button text
+  // Update translate button text and click functionality
   const translateBtn = document.getElementById('translate-btn');
   if (translateBtn) {
     translateBtn.textContent = lang === 'en' ? 'português' : 'english';
@@ -68,15 +56,13 @@ window.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('siteLanguage', newLang);
 
       // Redirect accordingly
-      if (newLang === 'en' && reversePageMap[currentPage]) {
-        window.location.href = reversePageMap[currentPage];
-      } else if (newLang === 'pt' && pageMap[currentPage]) {
+      if (newLang === 'en' && pageMap[currentPage]) {
         window.location.href = pageMap[currentPage];
+      } else if (newLang === 'pt' && reversePageMap[currentPage]) {
+        window.location.href = reversePageMap[currentPage];
       } else {
         window.location.reload();
       }
     });
   }
 });
-
-console.log(`Current page: ${currentPage}, Language: ${lang}`);

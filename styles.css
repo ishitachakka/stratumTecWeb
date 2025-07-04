@@ -106,7 +106,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   position: fixed;
@@ -185,18 +185,26 @@ nav.navbar-nav ul.menu li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
   background: #fff;
   border-top: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 99;
+  width: 100%;
+  min-width: 300px; /* Adjust based on your box size */
+  padding: 1rem;
+}
+
+.menu-options {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(150px, 1fr)); /* single column default */
+  gap: 1rem;
 }
 
 .mega-menu-content {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 2rem;
-  padding: 2rem 2rem;
+  padding: 0.25rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   align-items: stretch;
@@ -232,18 +240,19 @@ nav.navbar-nav ul.menu li a:hover {
 
 .menu-options a {
   display: block;
-  padding: 1rem;
-  border: 1px solid #eee;
+  padding: 0.5rem;
+  border: 1px solid transparent; /* no border by default */
   border-radius: 8px;
   text-decoration: none;
   color: #28265B;
-  transition: 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
   text-align: center;
 }
 
 .menu-options a:hover {
-  border-color: #EC7C2D;
+  border-color: #EC7C2D; /* show orange border on hover only */
   color: #EC7C2D;
+  background-color: #fff; /* keep white background */
 }
 
 /* =========================
