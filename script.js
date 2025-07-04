@@ -24,18 +24,20 @@ for (const [pt, en] of Object.entries(pageMap)) {
 
 window.addEventListener('DOMContentLoaded', () => {
   let lang = localStorage.getItem('siteLanguage');
-  const currentPage = window.location.pathname;
+  let currentPage = window.location.pathname;
 
-  // DEBUG LOGS
-  console.log(`Current page: ${currentPage}, Language: ${lang}`);
+  // Adjust for GitHub Pages repo prefix
+  if (currentPage.startsWith('/stratumTecWeb')) {
+    currentPage = currentPage.replace('/stratumTecWeb', '');
+  }
 
-  // If language not set, default to 'pt' and set it
+  console.log(`Adjusted currentPage: ${currentPage}, Language: ${lang}`);
+
   if (!lang) {
     lang = 'pt';
     localStorage.setItem('siteLanguage', 'pt');
   }
 
-  // Redirect to match stored language preference
   if (lang === 'en' && pageMap[currentPage]) {
     window.location.href = pageMap[currentPage];
     return;
@@ -45,7 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Update translate button text and click functionality
   const translateBtn = document.getElementById('translate-btn');
   if (translateBtn) {
     translateBtn.textContent = lang === 'en' ? 'português' : 'english';
@@ -55,7 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const newLang = lang === 'en' ? 'pt' : 'en';
       localStorage.setItem('siteLanguage', newLang);
 
-      // Redirect accordingly
       if (newLang === 'en' && pageMap[currentPage]) {
         window.location.href = pageMap[currentPage];
       } else if (newLang === 'pt' && reversePageMap[currentPage]) {
