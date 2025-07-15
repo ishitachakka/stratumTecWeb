@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratumTec | Produtos</title>
+  <title>stratumtec | Insights e Tendências</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Standard fonts for stratumtec -->
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-wrapper">
@@ -15,28 +16,23 @@
   <header class="navbar">
     <div class="logo-block">
       <a href="index.html" class="logo-link" data-en="indexE.html" data-pt="index.html">
-        <img src="assets/logo.png" alt="Logo StratumTec" class="logo-image" />
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
       </a>
-      <a href="javascript:void(0);" id="translate-btn" class="translate-link">english</a>
     </div>
 
     <nav class="navbar-nav">
       <ul class="menu">
         <li>
-          <a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a>
+          <a href="company.html" data-en="companyE.html" data-pt="company.html">Empresa</a>
         </li>
         <li>
           <a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a>
         </li>
         <li>
-          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Especializações</a>
+          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Consultoria</a>
         </li>
         <li>
-          <a href="company.html" data-en="companyE.html" data-pt="company.html">Empresa</a>
-        </li>
-        <li>
-          <a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
-            Tendências</a>
+          <a href="content.html" data-en="contentE.html" data-pt="content.html">Conteúdo</a>
         </li>
         <li>
           <a href="contact.html" data-en="contactE.html" data-pt="contact.html">Contato</a>
@@ -45,25 +41,18 @@
     </nav>
 
     <!-- Mega Menus BELOW nav -->
-    <div class="mega-menu-panel" id="products-menu">
-      <div class="mega-menu-content">
-        <div class="menu-title">Produtos</div>
-        <div class="menu-options">
-          <a href="products.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a>
-          <a href="products.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
-            Mesh</a>
-        </div>
-      </div>
-    </div>
-
     <div class="mega-menu-panel" id="solutions-menu">
       <div class="mega-menu-content">
         <div class="menu-title">Soluções</div>
         <div class="menu-options">
+          <a href="solutions.html#NCS" data-en="solutionsE.html#NCS"
+            data-pt="solutions.html#NCS">NCS Technology</a>
+          <a href="solutions.html#BlueMesh" data-en="solutionsE.html#BlueMesh"
+            data-pt="solutions.html#BlueMesh">BlueMesh</a>
           <a href="solutions.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
             data-pt="solutions.html#CustomerJourney">Jornada do Cliente</a>
           <a href="solutions.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-            data-pt="solutions.html#Omnichannel">Omnicanal</a>
+            data-pt="solutions.html#Omnichannel">Omnichannel</a>
           <a href="solutions.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
             data-pt="solutions.html#DataAnalytics">Análise de Dados | BI</a>
           <a href="solutions.html#Monetization" data-en="solutionsE.html#Monetization"
@@ -78,15 +67,15 @@
 
     <div class="mega-menu-panel" id="expertise-menu">
       <div class="mega-menu-content">
-        <div class="menu-title">Expertise</div>
+        <div class="menu-title">Consultoria</div>
         <div class="menu-options">
           <a href="expertise.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
             data-pt="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a>
           <a href="expertise.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-            data-pt="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a>
-          <a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a>
+            data-pt="expertise.html#CustomerExperienceProcess">Processos de CX</a>
+          <a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC – Voz do Cliente</a>
           <a href="expertise.html#Assessment" data-en="expertiseE.html#Assessment"
-            data-pt="expertise.html#Assessment">Avaliação</a>
+            data-pt="expertise.html#Assessment">Assessment</a>
           <a href="expertise.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
             data-pt="expertise.html#DigitalTransformation">Transformação Digital</a>
         </div>
@@ -95,26 +84,41 @@
 
   </header>
 
+  <!-- PAGE BANNER -->
+  <section class="page-banner" style="background-color: #EC7C2D; color: white; text-align: center; padding: 4rem 2rem;">
+    <h1>Insights e Tendências</h1>
+    <p>Mantenha-se à frente com nossas últimas perspectivas sobre IA, Nuvem, DevOps e mais.</p>
+  </section>
+
   <!-- MAIN CONTENT -->
   <main class="section">
-    <!-- NCS Product Section -->
-    <div class="info-box" id="NCS">
-      <h2>NCS</h2>
-      <p>
-        A Netstratum Communication Suite oferece uma ampla gama de recursos de comunicação unificada para o trabalho moderno — incluindo reuniões por vídeo, mensagens, mobilidade e colaboração. O NCS foi desenvolvido para escalabilidade em ambientes de nuvem privada e pública, preservando sua infraestrutura atual e capacitando contact centers e equipes distribuídas globalmente.
-      </p>
-      <img src="assets/com.png" alt="Plataforma NCS" class="product-image" />
-    </div>
+    <div class="insights-grid">
+      <div class="blog-card" data-aos="fade-up">
+        <img src="assets/placeholder1.jpg" alt="IA em CX">
+        <div class="blog-content">
+          <h3>IA Transformando a Experiência do Cliente</h3>
+          <p>Descubra como a IA está revolucionando o engajamento do cliente em diversos setores.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
+        </div>
+      </div>
 
-    <!-- Blue Mesh Product Section -->
-    <div class="info-box" id="BlueMesh">
-      <h2>Blue Mesh</h2>
-      <p>
-        O Blue Mesh fornece uma plataforma de IA privada e segura com uma abordagem Human-in-the-Loop. Traz automação inteligente para seus fluxos de trabalho mantendo a supervisão humana central. Projetado para precisão, conformidade e impacto no mundo real.
-      </p>
-      <img src="assets/mesh.png" alt="Plataforma Blue Mesh" class="product-image" />
-      <br />
-      <a href="https://bluemesh.ai/" target="_blank" class="consult-btn">Saiba Mais</a>
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/placeholder2.jpg" alt="Tendências DevOps">
+        <div class="blog-content">
+          <h3>Tendências de DevOps em 2025</h3>
+          <p>Descubra estruturas modernas e automações que moldam o DevOps neste ano.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/placeholder3.jpg" alt="Migração para Nuvem">
+        <div class="blog-content">
+          <h3>Migração para Nuvem Eficiente</h3>
+          <p>Conheça as estratégias principais para uma transição bem-sucedida para a nuvem.</p>
+          <a href="#" class="consult-btn">Leia Mais</a>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -122,9 +126,9 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <img src="assets/logo.png" alt="Logo StratumTec" class="logo-image" />
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
         <p>
-          A StratumTec oferece soluções de TI inovadoras por meio de uma equipe global qualificada e parceiros
+          A stratumtec oferece soluções de TI inovadoras por meio de uma equipe global qualificada e parceiros
           confiáveis. Ajudamos você
           a reduzir custos, aumentar valor e alcançar excelência operacional com softwares escaláveis, plataformas em
           nuvem e
@@ -141,20 +145,15 @@
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Produtos</h3>
+          <h3>Soluções</h3>
           <ul>
             <li><a href="products.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a></li>
             <li><a href="products.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
                 Mesh</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Soluções</h3>
-          <ul>
             <li><a href="solutions.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
                 data-pt="solutions.html#CustomerJourney">Jornada do Cliente</a></li>
             <li><a href="solutions.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-                data-pt="solutions.html#Omnichannel">Omnicanal</a></li>
+                data-pt="solutions.html#Omnichannel">Omnichannel</a></li>
             <li><a href="solutions.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
                 data-pt="solutions.html#DataAnalytics">Análise de Dados | BI</a></li>
             <li><a href="solutions.html#Monetization" data-en="solutionsE.html#Monetization"
@@ -166,24 +165,23 @@
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Expertise</h3>
+          <h3>Consultoria</h3>
           <ul>
             <li><a href="expertise.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
                 data-pt="expertise.html#CustomerJourneyMapping">Mapeamento da Jornada do Cliente</a></li>
             <li><a href="expertise.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-                data-pt="expertise.html#CustomerExperienceProcess">Processo de Experiência do Cliente</a></li>
-            <li><a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a></li>
+                data-pt="expertise.html#CustomerExperienceProcess">Processos de CX</a></li>
+            <li><a href="expertise.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC – Voz do Cliente</a></li>
             <li><a href="expertise.html#Assessment" data-en="expertiseE.html#Assessment"
-                data-pt="expertise.html#Assessment">Avaliação</a></li>
+                data-pt="expertise.html#Assessment">Assessment</a></li>
             <li><a href="expertise.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
                 data-pt="expertise.html#DigitalTransformation">Transformação Digital</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Insights</h3>
+          <h3>Conteúdo</h3>
           <ul>
-            <li><a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights e
-                Tendências</a></li>
+            <li><a href="content.html" data-en="contentE.html" data-pt="content.html">Conteúdo</a></li>
           </ul>
         </div>
       </div>
@@ -191,7 +189,7 @@
 
     <hr>
     <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
-      © 2025 StratumTec. Todos os direitos reservados.
+      © 2025 stratumtec. Todos os direitos reservados.
     </p>
   </footer>
 
