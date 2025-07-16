@@ -566,6 +566,13 @@ hr {
    EXPERTISE GRID & CARDS
    ========================= */
 
+.expertise {
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: #f7f7f7; /* optional light background */
+  box-sizing: border-box;
+}
+
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
