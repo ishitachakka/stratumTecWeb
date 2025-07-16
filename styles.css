@@ -15,6 +15,8 @@ html, body {
   line-height: 1.5;
   background-color: #F3F3F3;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -82,7 +84,6 @@ button:hover, .btn-primary:hover, .consult-btn:hover {
   height: 100vh;
   overflow: hidden;
   z-index: 0;
-  margin-bottom: 2rem;
 }
 
 .hero-video {
@@ -134,7 +135,7 @@ button:hover, .btn-primary:hover, .consult-btn:hover {
 .hero-carousel {
   position: relative;
   width: 100%;
-  height: auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -142,12 +143,14 @@ button:hover, .btn-primary:hover, .consult-btn:hover {
 .hero-slide {
   position: relative;
   width: 100%;
-  height: 60vh; /* ⬅️ Reduced height */
+  height: 50vh; /* Short banner */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-bg {
@@ -155,11 +158,13 @@ button:hover, .btn-primary:hover, .consult-btn:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Fix this from 100vh */
   background-size: cover;
   background-position: center;
   z-index: 0;
   filter: brightness(0.6);
+  margin: 0;
+  padding: 0;
 }
 
 .hero-content {
@@ -345,13 +350,20 @@ nav.navbar-nav ul.menu li a:hover {
    MAIN SECTION
    ========================= */
 
+main.index-section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 main.section {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 80px 2rem 0 2rem; /* Top padding adjusted for fixed navbar */
+  padding: 80px 2rem 0 2rem; 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .info-box {
@@ -460,7 +472,7 @@ main.section {
   max-width: 280px; /* increased from 220px to ensure last column words fit nicely */
   word-wrap: break-word;
   overflow-wrap: anywhere;
-  padding-left: 2rem;
+  padding: 2 2rem;
 }
 
 .footer-left h2 {
