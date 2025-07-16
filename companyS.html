@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stratumtec | Empresa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<a href="https://wa.me/5511993324239" class="whatsapp-float" target="_blank" title="Habla con nosotros en WhatsApp">
+  <img src="assets/whatsapp.png" alt="Chat de WhatsApp" />
+</a>
+
+<body class="page-wrapper">
+  <header class="navbar">
+    <div class="logo-block">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
+      </a>
+    </div>
+
+    <nav class="navbar-nav">
+      <ul class="menu">
+        <li><a href="company.html">Empresa</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluciones</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Consultoría</a></li>
+        <li><a href="content.html">Contenido</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+      <div class="language-selector">
+        <button id="language-toggle">
+          <img src="assets/world.png" alt="Idioma" class="flag-icon" />
+        </button>
+        <ul class="language-dropdown">
+          <li><a href="company.html" data-lang="pt"><img src="assets/brazil.jpg" alt="Portugués" /></a></li>
+          <li><a href="companyE.html" data-lang="en"><img src="assets/usa.jpg" alt="Inglés" /></a></li>
+          <li><a href="companyS.html" data-lang="es"><img src="assets/spain.jpg" alt="Español" /></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mega-menu-panel" id="solutions-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Soluciones</div>
+        <div class="menu-options">
+          <a href="solutions.html#NCS">Tecnología NCS</a>
+          <a href="solutions.html#BlueMesh">BlueMesh</a>
+          <a href="solutions.html#CustomerJourney">Viaje del Cliente</a>
+          <a href="solutions.html#Omnichannel">Omnicanal</a>
+          <a href="solutions.html#DataAnalytics">Análisis de Datos | BI</a>
+          <a href="solutions.html#Monetization">Monetización</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps e Integración</a>
+          <a href="solutions.html#IoTDevelopment">Desarrollo IoT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="expertise-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Consultoría</div>
+        <div class="menu-options">
+          <a href="expertise.html#CustomerJourneyMapping">Mapeo del Viaje del Cliente</a>
+          <a href="expertise.html#CustomerExperienceProcess">Procesos de CX</a>
+          <a href="expertise.html#VoC">VoC – Voz del Cliente</a>
+          <a href="expertise.html#Assessment">Evaluación</a>
+          <a href="expertise.html#DigitalTransformation">Transformación Digital</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="info-box">
+      <h1>stratumtec es un Hub Global de Soluciones Tecnológicas para Experiencia del Cliente (CX)</h1>
+    </div>
+
+    <div class="info-box">
+      <p>Actuamos como una plataforma que desarrolla soluciones tecnológicas (software) con el objetivo de escalar negocios junto al cliente, maximizando la rentabilidad de las operaciones mediante proyectos inteligentes e innovadores. Conectamos diferentes agentes del ecosistema, integrando soluciones, personalizando sistemas, sin abandonar los legados de la organización. ¡Todo esto con velocidad y calidad inigualable!</p>
+    </div>
+
+    <div class="info-box">
+      <p>stratumtec es una empresa de software de origen estadounidense con presencia global, especializada en el desarrollo tecnológico e integración de soluciones para Contact Center, atención multicanal y multiplataforma, permitiendo una mejor Gestión de la Experiencia del Cliente (CXM).</p>
+    </div>
+
+    <div class="info-box">
+      <p>Nuestro propósito central es fortalecer la representatividad estratégica del área de CX dentro de las organizaciones, creando valor tangible a través de monetización, mejoras significativas de eficiencia y reducción efectiva de los costos operativos. Somos referencia en atender demandas complejas relacionadas con integración tecnológica, escalabilidad operativa y soporte especializado.</p>
+    </div>
+
+    <div class="info-box">
+      <p>La gran ventaja competitiva de stratumtec es ofrecer al mercado soluciones tecnológicas altamente personalizadas e inteligentes. Actuamos directamente en el diseño y optimización del viaje del cliente, utilizando insights generados a partir de los datos reales de las organizaciones, ofreciendo productos y servicios más acertados y rentables. El resultado directo es un aumento expresivo de la rentabilidad de las compañías asociadas, con soluciones que impulsan ingresos mientras reducen costos operativos.</p>
+    </div>
+
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Contáctanos</h2>
+        <p>Envíanos un correo electrónico en cualquier momento. Recibimos todas las sugerencias y preguntas.</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Agenda una Consulta</h3>
+        <form action="mailto:sales@stratumtec.com" method="POST" enctype="text/plain">
+          <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+          <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required />
+          <input type="text" id="subject" name="subject" placeholder="Escribe el asunto" required />
+          <textarea id="message" name="message" placeholder="Describe tu mensaje aquí" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
+        <p>
+          stratumtec ofrece soluciones de TI innovadoras a través de un equipo global calificado y socios confiables. Te ayudamos a reducir costos, aumentar el valor y alcanzar la excelencia operativa con software escalable, plataformas en la nube y productos de IA como NCS y BlueMesh.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="company.html">Acerca de</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Soluciones</h3>
+          <ul>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">BlueMesh</a></li>
+            <li><a href="solutions.html#CustomerJourney">Viaje del Cliente</a></li>
+            <li><a href="solutions.html#Omnichannel">Omnicanal</a></li>
+            <li><a href="solutions.html#DataAnalytics">Análisis de Datos | BI</a></li>
+            <li><a href="solutions.html#Monetization">Monetización</a></li>
+            <li><a href="solutions.html#DevOpsIntegration">DevOps e Integración</a></li>
+            <li><a href="solutions.html#IoTDevelopment">Desarrollo IoT</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Consultoría</h3>
+          <ul>
+            <li><a href="expertise.html#CustomerJourneyMapping">Mapeo del Viaje del Cliente</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess">Procesos de CX</a></li>
+            <li><a href="expertise.html#VoC">VoC – Voz del Cliente</a></li>
+            <li><a href="expertise.html#Assessment">Evaluación</a></li>
+            <li><a href="expertise.html#DigitalTransformation">Transformación Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contenido</h3>
+          <ul>
+            <li><a href="content.html">Contenido</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
+      © 2025 stratumtec. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

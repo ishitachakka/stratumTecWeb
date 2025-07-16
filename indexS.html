@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stratumtec</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<a href="https://wa.me/5511993324239" class="whatsapp-float" target="_blank" title="Habla con nosotros en WhatsApp">
+  <img src="assets/whatsapp.png" alt="Chat de WhatsApp" />
+</a>
+
+<body class="page-wrapper">
+  <header class="navbar">
+    <div class="logo-block">
+      <a href="index.html" class="logo-link" data-en="indexE.html" data-pt="index.html">
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
+      </a>
+    </div>
+
+    <nav class="navbar-nav">
+      <ul class="menu">
+        <li><a href="company.html">Empresa</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluciones</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Consultoría</a></li>
+        <li><a href="content.html">Contenido</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+      <div class="language-selector">
+        <button id="language-toggle">
+          <img src="assets/world.png" alt="Language" class="flag-icon" />
+        </button>
+        <ul class="language-dropdown">
+          <li><a href="index.html" data-lang="pt"><img src="assets/brazil.jpg" alt="Português" /></a></li>
+          <li><a href="indexE.html" data-lang="en"><img src="assets/usa.jpg" alt="English" /></a></li>
+          <li><a href="indexS.html" data-lang="es"><img src="assets/spain.jpg" alt="Español" /></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mega-menu-panel" id="solutions-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Soluciones</div>
+        <div class="menu-options">
+          <a href="solutions.html#NCS">NCS Technology</a>
+          <a href="solutions.html#BlueMesh">BlueMesh</a>
+          <a href="solutions.html#CustomerJourney">Viaje del Cliente</a>
+          <a href="solutions.html#Omnichannel">Omnicanal</a>
+          <a href="solutions.html#DataAnalytics">Análisis de Datos | BI</a>
+          <a href="solutions.html#Monetization">Monetización</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps & Integración</a>
+          <a href="solutions.html#IoTDevelopment">Desarrollo IoT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-panel" id="expertise-menu">
+      <div class="mega-menu-content">
+        <div class="menu-title">Consultoría</div>
+        <div class="menu-options">
+          <a href="expertise.html#CustomerJourneyMapping">Mapeo del Viaje del Cliente</a>
+          <a href="expertise.html#CustomerExperienceProcess">Procesos de CX</a>
+          <a href="expertise.html#VoC">VoC – Voz del Cliente</a>
+          <a href="expertise.html#Assessment">Evaluación</a>
+          <a href="expertise.html#DigitalTransformation">Transformación Digital</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <video id="bgVideo" class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/orangeTech.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento de vídeo.
+    </video>
+    <div class="hero-overlay">
+      <img src="assets/logo.png" alt="Logo stratumtec" class="hero-image" />
+      <p class="overlay-line blue-line">Donde la Innovación Significa Excelencia</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <section class="hero-carousel">
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('assets/banner1.jpg');"></div>
+        <div class="hero-content">
+          <h1>stratumtec</h1>
+          <p>Una nueva era de inteligencia en CX</p>
+          <a href="#" class="consult-btn">Prueba Ahora</a>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('assets/banner2.jpg');"></div>
+        <div class="hero-content">
+          <h1>Centro Global de Soluciones Tecnológicas para CX</h1>
+          <a href="#" class="consult-btn">Conoce Más</a>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <h1>Donde la Experiencia Significa Innovación.</h1>
+          <a href="#" class="consult-btn">Descubre</a>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <h1>¡Monetiza!</h1>
+          <p>Estrategias de monetización que transforman tu negocio</p>
+          <a href="#" class="consult-btn">Saber Más</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="assets/logo.png" alt="Logo stratumtec" class="logo-image" />
+        <p>
+          Stratumtec ofrece soluciones de TI innovadoras a través de un equipo global calificado y socios confiables.
+          Te ayudamos a reducir costos, aumentar valor y alcanzar la excelencia operativa con software escalable,
+          plataformas en la nube y productos de IA como NCS y BlueMesh.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="company.html">Acerca de</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Soluciones</h3>
+          <ul>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">BlueMesh</a></li>
+            <li><a href="solutions.html#CustomerJourney">Viaje del Cliente</a></li>
+            <li><a href="solutions.html#Omnichannel">Omnicanal</a></li>
+            <li><a href="solutions.html#DataAnalytics">Análisis de Datos | BI</a></li>
+            <li><a href="solutions.html#Monetization">Monetización</a></li>
+            <li><a href="solutions.html#DevOpsIntegration">DevOps & Integración</a></li>
+            <li><a href="solutions.html#IoTDevelopment">Desarrollo IoT</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Consultoría</h3>
+          <ul>
+            <li><a href="expertise.html#CustomerJourneyMapping">Mapeo del Viaje del Cliente</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess">Procesos de CX</a></li>
+            <li><a href="expertise.html#VoC">VoC – Voz del Cliente</a></li>
+            <li><a href="expertise.html#Assessment">Evaluación</a></li>
+            <li><a href="expertise.html#DigitalTransformation">Transformación Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contenido</h3>
+          <ul>
+            <li><a href="content.html">Contenido</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p class="legal" style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">
+      © 2025 stratumtec. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

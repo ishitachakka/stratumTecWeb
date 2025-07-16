@@ -7,195 +7,211 @@
   <title>stratumtec | Solutions</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Standard fonts for stratumtec -->
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body class="page-wrapper" style="background-color: #000;">
-  <!-- NAVBAR -->
+<a href="https://wa.me/5511993324239" class="whatsapp-float" target="_blank" title="Talk to us on WhatsApp">
+  <img src="assets/whatsapp.png" alt="WhatsApp Chat" />
+</a>
+
+<body class="page-wrapper">
   <header class="navbar">
     <div class="logo-block">
-      <a href="indexE.html" class="logo-link" data-en="indexE.html" data-pt="index.html">
+      <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="stratumtec Logo" class="logo-image" />
       </a>
-      <a href="javascript:void(0);" id="translate-btn" class="translate-link">português</a>
     </div>
 
     <nav class="navbar-nav">
       <ul class="menu">
-        <li>
-          <a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a>
-        </li>
-        <li>
-          <a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a>
-        </li>
-        <li>
-          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Especializações</a>
-        </li>
-        <li>
-          <a href="company.html" data-en="companyE.html" data-pt="company.html">Empresa</a>
-        </li>
-        <li>
-          <a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
-            Tendências</a>
-        </li>
-        <li>
-          <a href="contact.html" data-en="contactE.html" data-pt="contact.html">Contato</a>
-        </li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Solutions</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Consulting</a></li>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-
-    <!-- Mega Menus BELOW nav -->
-    <div class="mega-menu-panel" id="products-menu">
-      <div class="mega-menu-content">
-        <div class="menu-title">Products</div>
-        <div class="menu-options">
-          <a href="productsE.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a>
-          <a href="productsE.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
-            Mesh</a>
-        </div>
+      <div class="language-selector">
+        <button id="language-toggle">
+          <img src="assets/world.png" alt="Language" class="flag-icon" />
+        </button>
+        <ul class="language-dropdown">
+          <li><a href="solutions.html" data-lang="pt"><img src="assets/brazil.jpg" alt="Português" /></a></li>
+          <li><a href="solutionsE.html" data-lang="en"><img src="assets/usa.jpg" alt="English" /></a></li>
+          <li><a href="solutionsS.html" data-lang="es"><img src="assets/spain.jpg" alt="Español" /></a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
     <div class="mega-menu-panel" id="solutions-menu">
       <div class="mega-menu-content">
         <div class="menu-title">Solutions</div>
         <div class="menu-options">
-          <a href="solutionsE.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
-            data-pt="solutions.html#CustomerJourney">Customer Journey</a>
-          <a href="solutionsE.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-            data-pt="solutions.html#Omnichannel">Omnichannel</a>
-          <a href="solutionsE.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
-            data-pt="solutions.html#DataAnalytics">Data Analytics | BI</a>
-          <a href="solutionsE.html#Monetization" data-en="solutionsE.html#Monetization"
-            data-pt="solutions.html#Monetization">Monetization</a>
-          <a href="solutionsE.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
-            data-pt="solutions.html#DevOpsIntegration">DevOps & Integration</a>
-          <a href="solutionsE.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
-            data-pt="solutions.html#IoTDevelopment">IoT Development</a>
+          <a href="solutions.html#NCS">NCS Technology</a>
+          <a href="solutions.html#BlueMesh">BlueMesh</a>
+          <a href="solutions.html#CustomerJourney">Customer Journey</a>
+          <a href="solutions.html#Omnichannel">Omnichannel</a>
+          <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
+          <a href="solutions.html#Monetization">Monetization</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
+          <a href="solutions.html#IoTDevelopment">IoT Development</a>
         </div>
       </div>
     </div>
 
     <div class="mega-menu-panel" id="expertise-menu">
       <div class="mega-menu-content">
-        <div class="menu-title">Expertise</div>
+        <div class="menu-title">Consulting</div>
         <div class="menu-options">
-          <a href="expertiseE.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
-            data-pt="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
-          <a href="expertiseE.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-            data-pt="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
-          <a href="expertiseE.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a>
-          <a href="expertiseE.html#Assessment" data-en="expertiseE.html#Assessment"
-            data-pt="expertise.html#Assessment">Assessment</a>
-          <a href="expertiseE.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
-            data-pt="expertise.html#DigitalTransformation">Digital Transformation</a>
+          <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
+          <a href="expertise.html#CustomerExperienceProcess">CX Processes</a>
+          <a href="expertise.html#VoC">VoC – Voice of the Customer</a>
+          <a href="expertise.html#Assessment">Assessment</a>
+          <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
         </div>
       </div>
     </div>
-
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="section">
-    <div class="info-box" id="CustomerJourney">
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Customer Service and Call Center Solutions:</h1>
+      <h1>More efficiency and profitability for your operation</h1>
+      <p>stratumtec goes beyond software development, creating customized strategies that combine technology and services to promote greater service efficiency and profitability. Count on stratumtec to transform the customer service area into a profitable and active voice within the organization. Discover our solutions:</p>
+    </div>
+  </section>
+
+  <main class="section expertise-grid">
+    <div class="product-section" id="NCS">
+      <div class="product-hero">
+        <div class="product-text left">
+          <h2>NCS Technology | Customer Service Software</h2>
+          <p>NCS is an intelligent omnichannel platform that integrates WhatsApp, chat, email, voice, SMS, video, and automation into a single low-code solution.</p>
+        </div>
+        <div class="product-image-block right">
+          <img src="assets/com.png" alt="NCS Platform" class="product-image-wide" />
+        </div>
+      </div>
+      <div class="product-info-box">
+        <p>Designed to boost engagement and optimize operational costs, it allows the rapid implementation of advanced features without technical complexity.</p>
+      </div>
+      <div class="product-info-box">
+        <p>NCS is a unified, intelligent omnichannel communication platform with video conferencing, recording, and analytics.</p>
+      </div>
+      <div class="product-info-box">
+        <p>With low-code infrastructure, NCS allows you to incorporate voice and video features into any application in minutes.</p>
+      </div>
+      <div class="product-info-box">
+        <p>Ideal for organizations that want to democratize high-level communication with versatile, user-centered tools.</p>
+      </div>
+    </div>
+
+    <div class="product-section" id="BlueMesh">
+      <div class="product-hero reverse">
+        <div class="product-image-block left">
+          <img src="assets/mesh.png" alt="BlueMesh Platform" class="product-image-wide" />
+        </div>
+        <div class="product-text right">
+          <h2>BlueMesh | Intelligent Automation (AI)</h2>
+          <p>Use AI to automate and optimize projects, detect risks in real-time, and turn data into strategic decisions with security and precision.</p>
+          <a href="https://bluemesh.ai/" target="_blank" class="consult-btn">Learn More</a>
+        </div>
+      </div>
+      <div class="product-info-box">
+        <p>BlueMesh is the ultimate platform for intelligent automation and agile management with low-code orchestration and native AI.</p>
+      </div>
+      <div class="product-info-box">
+        <p>Automatically detects bottlenecks, risks, and threatened deadlines, eliminating unproductive meetings.</p>
+      </div>
+      <div class="product-info-box">
+        <p>Train and deploy models with security and compliance. Provide explainable forecasts with human intervention.</p>
+      </div>
+      <div class="product-info-box">
+        <p>Predictive dashboards turn data into actions. Open APIs reduce time-to-value.</p>
+      </div>
+      <div class="product-info-box">
+        <p>Design complete customer journeys and trigger content at each touchpoint. Scalable and secure.</p>
+      </div>
+    </div>
+
+    <div class="expertise-card" id="CustomerJourney" data-aos="fade-up">
       <h2>Customer Journey</h2>
-      <p>Map and optimize your customer journeys to enhance satisfaction and business outcomes.</p>
+      <p1>Create seamless journeys with intelligent personalization and predictive analytics, boosting loyalty and profitability by delivering the best experience in every interaction.</p1>
+      <p>Revolutionize your CX strategy with stratumtec's Customer Journey solution. With advanced technology and predictive analytics, we map each interaction point in real-time, personalize experiences, and optimize processes. Identify upsell and cross-sell opportunities, anticipate needs, and build memorable journeys that increase customer loyalty and operational profitability. Enhance customer relationships and gain a decisive competitive edge in the market.</p>
     </div>
 
-    <div class="info-box" id="Omnichannel">
+    <div class="expertise-card" id="Omnichannel" data-aos="fade-up">
       <h2>Omnichannel</h2>
-      <p>Deliver consistent and integrated experiences across multiple customer touchpoints.</p>
+      <p1>Integrate channels, simplify processes, and reduce costs. Provide agile, consistent, and memorable service, enhancing customer satisfaction and success.</p1>
+      <p>Centralize your interactions on a single, agile, and intuitive multichannel platform. Integrate SMS, email, voice, WhatsApp, chat, and video in real-time, ensuring consistency and excellence across all channels. Reduce operational costs, increase efficiency, and provide memorable experiences. With intelligent automation, serve customers assertively and proactively, boosting satisfaction, loyalty, and operational success.</p>
     </div>
 
-    <div class="info-box" id="DataAnalytics">
+    <div class="expertise-card" id="DataAnalytics" data-aos="fade-up">
       <h2>Data Analytics | BI</h2>
-      <p>Gain actionable insights with our advanced data analytics and business intelligence solutions.</p>
+      <p1>Extract valuable insights with Data Analytics and BI. Make quick, personalized, and accurate decisions, improving both experience and financial results.</p1>
+      <p>Transform data into strategic insights with stratumtec's advanced Data Analytics and BI solution. Get detailed real-time reports, accurate forecasts, and intuitive dashboards that guide immediate and assertive decisions. Customize actions based on actual consumer behavior, significantly increasing operational efficiency and boosting financial results. Drive your CX strategy with precise, relevant, and strategic data.</p>
     </div>
 
-    <div class="info-box" id="Monetization">
+    <div class="expertise-card" id="Monetization" data-aos="fade-up">
       <h2>Monetization</h2>
-      <p>Unlock new revenue streams and optimize existing ones through strategic monetization solutions.</p>
+      <p1>Increase your revenue with a smart monetization strategy. Personalize offers, identify hidden opportunities, and build customer loyalty with unique experiences.</p1>
+      <p>Maximize revenue and profitability with intelligent, customer-centered monetization strategies. The stratumtec solution enables dynamic pricing, personalized offers, and the identification of hidden opportunities, increasing your profitability. With real-time data, deliver accurate experiences and irresistible offers, building customer loyalty and optimizing operations. Turn CX into tangible results.</p>
     </div>
 
-    <div class="info-box" id="DevOpsIntegration">
+    <div class="expertise-card" id="DevOpsIntegration" data-aos="fade-up">
       <h2>DevOps & Integration</h2>
-      <p>Streamline development and deployment pipelines with robust DevOps and integration services.</p>
-    </div>
-    <div class="hero-banner">
-      <img src="assets/Herobanner.svg" alt="Trusted by Clients Banner" class="hero-banner-img" />
+      <p1>Accelerate deliveries, reduce failures, and optimize costs with Integration and Development. Offer robust and scalable digital experiences to customers.</p1>
+      <p>Boost the agility and efficiency of your operation with advanced software development and IT operations solutions. Speed up deliveries, reduce operational failures, and ensure high availability, delivering robust and scalable digital services. Facilitate complex integrations quickly while preserving technological legacy, providing flawless experiences to end customers, optimizing costs, and maximizing results.</p>
     </div>
 
-    <div class="info-box" id="IoTDevelopment">
+    <div class="expertise-card" id="IoTDevelopment" data-aos="fade-up">
       <h2>IoT Development</h2>
-      <p>Design, develop, and deploy secure IoT solutions to connect your business ecosystem efficiently.</p>
+      <p1>Provide connected experiences with IoT. Capture real-time data and personalize interactions that build loyalty and maximize results.</p1>
+      <p>Enhance your customers' experience with stratumtec's IoT development. Connect smart devices, capture real-time data, and create highly personalized and predictive interactions. Anticipate needs, reduce operational failures, and offer differentiated and proactive services. With IoT, turn your operation into a connected ecosystem that drives efficiency, loyalty, and customer success.</p>
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
         <img src="assets/logo.png" alt="stratumtec Logo" class="logo-image" />
-        <p>
-          stratumtec delivers innovative IT solutions through a skilled global team and trusted partners. We help you
-          reduce costs, enhance value, and achieve operational excellence with scalable software, cloud platforms, and
-          AI-driven products like NCS and Blue Mesh.
-        </p>
+        <p>stratumtec offers innovative IT solutions through a global team of experts and trusted partners. We help you reduce costs, increase value, and achieve operational excellence with scalable software, cloud platforms, and AI products like NCS and BlueMesh.</p>
       </div>
 
       <div class="footer-right">
         <div class="footer-column">
           <h3>Company</h3>
           <ul>
-            <li><a href="companyE.html" data-en="companyE.html" data-pt="company.html">About</a></li>
-            <li><a href="contactE.html" data-en="contactE.html" data-pt="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="productsE.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a></li>
-            <li><a href="productsE.html#BlueMesh" data-en="productsE.html#BlueMesh"
-                data-pt="products.html#BlueMesh">Blue Mesh</a></li>
+            <li><a href="company.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Solutions</h3>
           <ul>
-            <li><a href="solutionsE.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
-                data-pt="solutions.html#CustomerJourney">Customer Journey</a></li>
-            <li><a href="solutionsE.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-                data-pt="solutions.html#Omnichannel">Omnichannel</a></li>
-            <li><a href="solutionsE.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
-                data-pt="solutions.html#DataAnalytics">Data Analytics | BI</a></li>
-            <li><a href="solutionsE.html#Monetization" data-en="solutionsE.html#Monetization"
-                data-pt="solutions.html#Monetization">Monetization</a></li>
-            <li><a href="solutionsE.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
-                data-pt="solutions.html#DevOpsIntegration">DevOps & Integration</a></li>
-            <li><a href="solutionsE.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
-                data-pt="solutions.html#IoTDevelopment">IoT Development</a></li>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">BlueMesh</a></li>
+            <li><a href="solutions.html#CustomerJourney">Customer Journey</a></li>
+            <li><a href="solutions.html#Omnichannel">Omnichannel</a></li>
+            <li><a href="solutions.html#DataAnalytics">Data Analytics | BI</a></li>
+            <li><a href="solutions.html#Monetization">Monetization</a></li>
+            <li><a href="solutions.html#DevOpsIntegration">DevOps & Integration</a></li>
+            <li><a href="solutions.html#IoTDevelopment">IoT Development</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Expertise</h3>
+          <h3>Consulting</h3>
           <ul>
-            <li><a href="expertiseE.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
-                data-pt="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a></li>
-            <li><a href="expertiseE.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-                data-pt="expertise.html#CustomerExperienceProcess">Customer Experience Process</a></li>
-            <li><a href="expertiseE.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a></li>
-            <li><a href="expertiseE.html#Assessment" data-en="expertiseE.html#Assessment"
-                data-pt="expertise.html#Assessment">Assessment</a></li>
-            <li><a href="expertiseE.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
-                data-pt="expertise.html#DigitalTransformation">Digital Transformation</a></li>
+            <li><a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess">CX Processes</a></li>
+            <li><a href="expertise.html#VoC">VoC – Voice of the Customer</a></li>
+            <li><a href="expertise.html#Assessment">Assessment</a></li>
+            <li><a href="expertise.html#DigitalTransformation">Digital Transformation</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Insights</h3>
+          <h3>Content</h3>
           <ul>
-            <li><a href="insightsTrendsE.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
-                Trends</a></li>
+            <li><a href="content.html">Content</a></li>
           </ul>
         </div>
       </div>
@@ -207,10 +223,10 @@
     </p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="navbar.js"></script>
+  <script>AOS.init();</script>
 </body>
 
 </html>

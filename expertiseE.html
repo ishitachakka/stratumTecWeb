@@ -4,121 +4,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>stratumtec Expertise | Customer Journey, Digital Transformation & CX Solutions</title>
+  <title>stratumtec Consulting | Customer Journey, Digital Transformation & CX Solutions</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Standard fonts for stratumtec -->
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
+<a href="https://wa.me/5511993324239" class="whatsapp-float" target="_blank" title="Talk to us on WhatsApp">
+  <img src="assets/whatsapp.png" alt="WhatsApp Chat" />
+</a>
+
 <body class="page-wrapper">
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo-block">
-      <a href="indexE.html" class="logo-link" data-en="indexE.html" data-pt="index.html">
+      <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="stratumtec Logo" class="logo-image" />
       </a>
-      <a href="javascript:void(0);" id="translate-btn" class="translate-link">português</a>
     </div>
 
     <nav class="navbar-nav">
       <ul class="menu">
-        <li>
-          <a href="#" onclick="toggleMegaMenu('products-menu')">Produtos</a>
-        </li>
-        <li>
-          <a href="#" onclick="toggleMegaMenu('solutions-menu')">Soluções</a>
-        </li>
-        <li>
-          <a href="#" onclick="toggleMegaMenu('expertise-menu')">Especializações</a>
-        </li>
-        <li>
-          <a href="company.html" data-en="companyE.html" data-pt="company.html">Empresa</a>
-        </li>
-        <li>
-          <a href="insightsTrends.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
-            Tendências</a>
-        </li>
-        <li>
-          <a href="contact.html" data-en="contactE.html" data-pt="contact.html">Contato</a>
-        </li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('solutions-menu')">Solutions</a></li>
+        <li><a href="#" onclick="toggleMegaMenu('expertise-menu')">Consulting</a></li>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-
-    <!-- Mega Menus BELOW nav -->
-    <div class="mega-menu-panel" id="products-menu">
-      <div class="mega-menu-content">
-        <div class="menu-title">Products</div>
-        <div class="menu-options">
-          <a href="productsE.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a>
-          <a href="productsE.html#BlueMesh" data-en="productsE.html#BlueMesh" data-pt="products.html#BlueMesh">Blue
-            Mesh</a>
-        </div>
+      <div class="language-selector">
+        <button id="language-toggle">
+          <img src="assets/world.png" alt="Language" class="flag-icon" />
+        </button>
+        <ul class="language-dropdown">
+          <li><a href="expertise.html" data-lang="pt"><img src="assets/brazil.jpg" alt="Português" /></a></li>
+          <li><a href="expertiseE.html" data-lang="en"><img src="assets/usa.jpg" alt="English" /></a></li>
+          <li><a href="expertiseS.html" data-lang="es"><img src="assets/spain.jpg" alt="Español" /></a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
     <div class="mega-menu-panel" id="solutions-menu">
       <div class="mega-menu-content">
         <div class="menu-title">Solutions</div>
         <div class="menu-options">
-          <a href="solutionsE.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
-            data-pt="solutions.html#CustomerJourney">Customer Journey</a>
-          <a href="solutionsE.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-            data-pt="solutions.html#Omnichannel">Omnichannel</a>
-          <a href="solutionsE.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
-            data-pt="solutions.html#DataAnalytics">Data Analytics | BI</a>
-          <a href="solutionsE.html#Monetization" data-en="solutionsE.html#Monetization"
-            data-pt="solutions.html#Monetization">Monetization</a>
-          <a href="solutionsE.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
-            data-pt="solutions.html#DevOpsIntegration">DevOps & Integration</a>
-          <a href="solutionsE.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
-            data-pt="solutions.html#IoTDevelopment">IoT Development</a>
+          <a href="solutions.html#NCS">NCS Technology</a>
+          <a href="solutions.html#BlueMesh">BlueMesh</a>
+          <a href="solutions.html#CustomerJourney">Customer Journey</a>
+          <a href="solutions.html#Omnichannel">Omnichannel</a>
+          <a href="solutions.html#DataAnalytics">Data Analytics | BI</a>
+          <a href="solutions.html#Monetization">Monetization</a>
+          <a href="solutions.html#DevOpsIntegration">DevOps & Integration</a>
+          <a href="solutions.html#IoTDevelopment">IoT Development</a>
         </div>
       </div>
     </div>
 
     <div class="mega-menu-panel" id="expertise-menu">
       <div class="mega-menu-content">
-        <div class="menu-title">Expertise</div>
+        <div class="menu-title">Consulting</div>
         <div class="menu-options">
-          <a href="expertiseE.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
-            data-pt="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
-          <a href="expertiseE.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-            data-pt="expertise.html#CustomerExperienceProcess">Customer Experience Process</a>
-          <a href="expertiseE.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a>
-          <a href="expertiseE.html#Assessment" data-en="expertiseE.html#Assessment"
-            data-pt="expertise.html#Assessment">Assessment</a>
-          <a href="expertiseE.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
-            data-pt="expertise.html#DigitalTransformation">Digital Transformation</a>
+          <a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a>
+          <a href="expertise.html#CustomerExperienceProcess">Customer Experience Processes</a>
+          <a href="expertise.html#VoC">VoC – Voice of the Customer</a>
+          <a href="expertise.html#Assessment">Assessment</a>
+          <a href="expertise.html#DigitalTransformation">Digital Transformation</a>
         </div>
       </div>
     </div>
-    
   </header>
 
-  <!-- PAGE BANNER -->
   <section class="page-banner">
     <div class="banner-content">
-      <h1>Our Expertise</h1>
-      <p>Empowering businesses with customer-centric digital strategies and solutions.</p>
+      <h1>Our Consulting</h1>
+      <p>Empowering companies with customer-centered digital strategies and solutions.</p>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
   <main class="section expertise-grid">
     <div class="expertise-card" id="CustomerJourneyMapping" data-aos="fade-up">
       <h2>Customer Journey Mapping</h2>
-      <p>Analyze and visualize customer interactions to improve experiences and drive engagement.</p>
+      <p>Analyze and visualize customer interactions to improve experiences and increase engagement.</p>
     </div>
 
     <div class="expertise-card" id="CustomerExperienceProcess" data-aos="fade-up">
-      <h2>Customer Experience Process</h2>
-      <p>Streamline processes to deliver seamless and memorable experiences for your clients.</p>
+      <h2>Customer Experience Processes</h2>
+      <p>Optimize processes to deliver seamless and memorable experiences to your customers.</p>
     </div>
 
     <div class="expertise-card" id="VoC" data-aos="fade-up">
-      <h2>Voice of Customer (VoC)</h2>
-      <p>Collect, analyze, and implement customer feedback to enhance services and products effectively.</p>
+      <h2>Voice of the Customer (VoC)</h2>
+      <p>Collect, analyze, and implement customer feedback to effectively improve services and products.</p>
     </div>
 
     <div class="expertise-card" id="Assessment" data-aos="fade-up">
@@ -132,21 +106,17 @@
     </div>
   </main>
 
-  <!-- CTA SECTION -->
   <section class="cta-section" data-aos="fade-up">
     <h2>Ready to Transform Your Customer Experience?</h2>
     <a href="contact.html" class="consult-btn">Contact Us</a>
   </section>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
         <img src="assets/logo.png" alt="stratumtec Logo" class="logo-image" />
         <p>
-          stratumtec delivers innovative IT solutions through a skilled global team and trusted partners. We help you
-          reduce costs, enhance value, and achieve operational excellence with scalable software, cloud platforms, and
-          AI-driven products like NCS and Blue Mesh.
+          stratumtec offers innovative IT solutions through a global team of qualified professionals and trusted partners. We help you reduce costs, increase value, and achieve operational excellence with scalable software, cloud platforms, and AI products like NCS and BlueMesh.
         </p>
       </div>
 
@@ -154,54 +124,37 @@
         <div class="footer-column">
           <h3>Company</h3>
           <ul>
-            <li><a href="companyE.html" data-en="companyE.html" data-pt="company.html">About</a></li>
-            <li><a href="contactE.html" data-en="contactE.html" data-pt="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Products</h3>
-          <ul>
-            <li><a href="productsE.html#NCS" data-en="productsE.html#NCS" data-pt="products.html#NCS">NCS</a></li>
-            <li><a href="productsE.html#BlueMesh" data-en="productsE.html#BlueMesh"
-                data-pt="products.html#BlueMesh">Blue Mesh</a></li>
+            <li><a href="company.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Solutions</h3>
           <ul>
-            <li><a href="solutionsE.html#CustomerJourney" data-en="solutionsE.html#CustomerJourney"
-                data-pt="solutions.html#CustomerJourney">Customer Journey</a></li>
-            <li><a href="solutionsE.html#Omnichannel" data-en="solutionsE.html#Omnichannel"
-                data-pt="solutions.html#Omnichannel">Omnichannel</a></li>
-            <li><a href="solutionsE.html#DataAnalytics" data-en="solutionsE.html#DataAnalytics"
-                data-pt="solutions.html#DataAnalytics">Data Analytics | BI</a></li>
-            <li><a href="solutionsE.html#Monetization" data-en="solutionsE.html#Monetization"
-                data-pt="solutions.html#Monetization">Monetization</a></li>
-            <li><a href="solutionsE.html#DevOpsIntegration" data-en="solutionsE.html#DevOpsIntegration"
-                data-pt="solutions.html#DevOpsIntegration">DevOps & Integration</a></li>
-            <li><a href="solutionsE.html#IoTDevelopment" data-en="solutionsE.html#IoTDevelopment"
-                data-pt="solutions.html#IoTDevelopment">IoT Development</a></li>
+            <li><a href="products.html#NCS">NCS</a></li>
+            <li><a href="products.html#BlueMesh">BlueMesh</a></li>
+            <li><a href="solutions.html#CustomerJourney">Customer Journey</a></li>
+            <li><a href="solutions.html#Omnichannel">Omnichannel</a></li>
+            <li><a href="solutions.html#DataAnalytics">Data Analytics | BI</a></li>
+            <li><a href="solutions.html#Monetization">Monetization</a></li>
+            <li><a href="solutions.html#DevOpsIntegration">DevOps & Integration</a></li>
+            <li><a href="solutions.html#IoTDevelopment">IoT Development</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Expertise</h3>
+          <h3>Consulting</h3>
           <ul>
-            <li><a href="expertiseE.html#CustomerJourneyMapping" data-en="expertiseE.html#CustomerJourneyMapping"
-                data-pt="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a></li>
-            <li><a href="expertiseE.html#CustomerExperienceProcess" data-en="expertiseE.html#CustomerExperienceProcess"
-                data-pt="expertise.html#CustomerExperienceProcess">Customer Experience Process</a></li>
-            <li><a href="expertiseE.html#VoC" data-en="expertiseE.html#VoC" data-pt="expertise.html#VoC">VoC</a></li>
-            <li><a href="expertiseE.html#Assessment" data-en="expertiseE.html#Assessment"
-                data-pt="expertise.html#Assessment">Assessment</a></li>
-            <li><a href="expertiseE.html#DigitalTransformation" data-en="expertiseE.html#DigitalTransformation"
-                data-pt="expertise.html#DigitalTransformation">Digital Transformation</a></li>
+            <li><a href="expertise.html#CustomerJourneyMapping">Customer Journey Mapping</a></li>
+            <li><a href="expertise.html#CustomerExperienceProcess">Customer Experience Processes</a></li>
+            <li><a href="expertise.html#VoC">VoC – Voice of the Customer</a></li>
+            <li><a href="expertise.html#Assessment">Assessment</a></li>
+            <li><a href="expertise.html#DigitalTransformation">Digital Transformation</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Insights</h3>
+          <h3>Content</h3>
           <ul>
-            <li><a href="insightsTrendsE.html" data-en="insightsTrendsE.html" data-pt="insightsTrends.html">Insights &
-                Trends</a></li>
+            <li><a href="content.html">Content</a></li>
           </ul>
         </div>
       </div>
@@ -213,7 +166,6 @@
     </p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="navbar.js"></script>

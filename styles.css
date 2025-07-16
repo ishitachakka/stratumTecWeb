@@ -14,7 +14,6 @@ html, body {
   font-weight: normal;
   line-height: 1.5;
   background-color: #F3F3F3;
-  color: #2F2F2F;
   max-width: 100%;
 }
 
@@ -36,16 +35,13 @@ h1, h2, h3,
 
 .subtitle, .section-subtitle, .highlight-callout {
   font-family: 'Poiret One', cursive;
-  color: #112E3D;
 }
 
 p, .info-box, .footer-left p, .blog-content p {
-  color: #2F2F2F;
   font-family: 'Open Sans', sans-serif;
 }
 
 a {
-  color: #112E3D;
   text-decoration: none;
 }
 
@@ -619,11 +615,13 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #28265B; /* navy blue */
-  color: white;
+  background-color: #ffffff; /* light background */
+  color: #28265B; /* navy blue text */
   padding: 2rem;
+  border: 2px solid #28265B; /* navy border */
   border-radius: 8px;
   gap: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info {
@@ -633,14 +631,21 @@ hr {
 .contact-info h2 {
   margin-bottom: 0.5rem;
   color: #EC7C2D; /* orange heading */
+  font-weight: bold;
+}
+
+.contact-info p {
+  color: #28265B;
 }
 
 .contact-details p {
   margin: 0.5rem 0;
+  color: #28265B;
 }
 
 .contact-details a {
   color: #EC7C2D; /* orange links */
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -651,6 +656,7 @@ hr {
 .contact-form h3 {
   margin-bottom: 1rem;
   color: #EC7C2D; /* orange subheading */
+  font-weight: bold;
 }
 
 .contact-form form input,
@@ -658,15 +664,15 @@ hr {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: rgba(255,255,255,0.9); /* light input field for contrast */
-  color: #28265B; /* navy blue text inside inputs */
+  background-color: #ffffff;
+  color: #28265B; /* navy text */
 }
 
 .contact-form form input::placeholder,
 .contact-form form textarea::placeholder {
-  color: #666; /* darker placeholder text */
+  color: #666;
 }
 
 .contact-form form button {
@@ -676,10 +682,11 @@ hr {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .contact-form form button:hover {
-  background-color: #cf6623; /* darker orange on hover */
+  background-color: #cf6623;
 }
 
 /* =========================
@@ -858,4 +865,101 @@ button:hover, .btn-primary:hover, .consult-btn:hover {
   display: block; /* So it behaves like a paragraph */
   margin-bottom: 1rem;
   color: #333;
+}
+
+/* ========== WHATSAPP STUFF ========== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background-color: #EC7C2D; /* Stratumtec orange */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ========== LANGUAGE STUFF ========== */
+
+.language-selector {
+  position: relative;
+}
+
+.language-selector button {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-selector button img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Dropdown itself */
+.language-selector .language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none; /* Hidden by default */
+  background: white;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.language-selector.show-dropdown .language-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-dropdown img {
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.language-dropdown img:hover {
+  transform: scale(1.1);
+}
+
+/* Flags inside dropdown */
+.language-dropdown li {
+  padding: 0.3rem 0;
+}
+
+.language-dropdown li img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
 }

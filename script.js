@@ -5,64 +5,94 @@ AOS.init();
 // LANGUAGE PREFERENCE LOGIC
 // =========================
 
-// Define page mapping (PT ➔ EN)
-const pageMap = {
-  '/index.html': '/indexE.html',
-  '/company.html': '/companyE.html',
-  '/contact.html': '/contactE.html',
-  '/products.html': '/productsE.html',
-  '/solutions.html': '/solutionsE.html',
-  '/expertise.html': '/expertiseE.html',
-  '/insightsTrends.html': '/insightsTrendsE.html'
+const langToggle = document.getElementById('language-toggle');
+const langSelector = document.querySelector('.language-selector');
+const langDropdown = document.querySelector('.language-dropdown');
+const langLinks = document.querySelectorAll('.language-dropdown a');
+
+// Map of current page (PT) → EN and ES versions
+const langMap = {
+  '/index.html': { en: '/indexE.html', es: '/indexS.html' },
+  '/company.html': { en: '/companyE.html', es: '/companyS.html' },
+  '/contact.html': { en: '/contactE.html', es: '/contactS.html' },
+  '/products.html': { en: '/productsE.html', es: '/productsS.html' },
+  '/solutions.html': { en: '/solutionsE.html', es: '/solutionsS.html' },
+  '/expertise.html': { en: '/expertiseE.html', es: '/expertiseS.html' },
+  '/content.html': { en: '/contentE.html', es: '/contentS.html' }
 };
 
-// Reverse mapping (EN ➔ PT)
-const reversePageMap = {};
-for (const [pt, en] of Object.entries(pageMap)) {
-  reversePageMap[en] = pt;
+// Reverse mapping for EN and ES → PT
+const reverseLangMap = {};
+for (const [pt, others] of Object.entries(langMap)) {
+  for (const [lang, path] of Object.entries(others)) {
+    reverseLangMap[path] = pt;
+  }
 }
 
+// =========================
+// TOGGLE DROPDOWN LOGIC
+// =========================
+
+langToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  langSelector.classList.toggle('show-dropdown');
+});
+
+// Prevent clicks inside the dropdown from closing it
+langDropdown.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', () => {
+  langSelector.classList.remove('show-dropdown');
+});
+
+// =========================
+// HANDLE LANGUAGE CHANGE
+// =========================
+
+langLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const selectedLang = e.currentTarget.dataset.lang;
+    localStorage.setItem('siteLanguage', selectedLang);
+    handleLanguageRedirect(selectedLang);
+  });
+});
+
+function handleLanguageRedirect(lang) {
+  const currentPath = window.location.pathname;
+
+  if (lang === 'pt') {
+    if (currentPath.endsWith('.html') && !currentPath.includes('E.html') && !currentPath.includes('S.html')) return;
+    const redirectTo = reverseLangMap[currentPath];
+    if (redirectTo) window.location.href = redirectTo;
+  } else {
+    const basePath = reverseLangMap[currentPath] || currentPath;
+    const redirectTo = langMap[basePath]?.[lang];
+    if (redirectTo) window.location.href = redirectTo;
+  }
+}
+
+// =========================
+// AUTO-LOAD PREFERRED LANGUAGE
+// =========================
+
 window.addEventListener('DOMContentLoaded', () => {
-  let lang = localStorage.getItem('siteLanguage');
-  let currentPage = window.location.pathname;
+  const savedLang = localStorage.getItem('siteLanguage');
 
-  // Adjust for GitHub Pages repo prefix
-  if (currentPage.startsWith('/stratumTecWeb')) {
-    currentPage = currentPage.replace('/stratumTecWeb', '');
-  }
-
-  console.log(`Adjusted currentPage: ${currentPage}, Language: ${lang}`);
-
-  if (!lang) {
-    lang = 'pt';
+  if (!savedLang) {
+    // First-time visitor: default to 'pt'
     localStorage.setItem('siteLanguage', 'pt');
+    return; // Don't redirect on first load
   }
 
-  if (lang === 'en' && pageMap[currentPage]) {
-    window.location.href = pageMap[currentPage];
-    return;
-  }
-  if (lang === 'pt' && reversePageMap[currentPage]) {
-    window.location.href = reversePageMap[currentPage];
-    return;
-  }
+  const currentPath = window.location.pathname;
+  const isPT = !currentPath.includes('E.html') && !currentPath.includes('S.html');
 
-  const translateBtn = document.getElementById('translate-btn');
-  if (translateBtn) {
-    translateBtn.textContent = lang === 'en' ? 'português' : 'english';
-
-    translateBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const newLang = lang === 'en' ? 'pt' : 'en';
-      localStorage.setItem('siteLanguage', newLang);
-
-      if (newLang === 'en' && pageMap[currentPage]) {
-        window.location.href = pageMap[currentPage];
-      } else if (newLang === 'pt' && reversePageMap[currentPage]) {
-        window.location.href = reversePageMap[currentPage];
-      } else {
-        window.location.reload();
-      }
-    });
+  // Only redirect if current page doesn't match saved language
+  if ((savedLang === 'en' && isPT) || (savedLang === 'es' && isPT)) {
+    handleLanguageRedirect(savedLang);
   }
 });
