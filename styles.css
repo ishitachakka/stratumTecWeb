@@ -435,7 +435,7 @@ main.section {
 .site-footer {
   background-color: #fff; /* white background like navbar */
   color: #28265B; /* navy blue text */
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
   width: 100%;
   overflow-x: hidden;
 }
@@ -443,7 +443,7 @@ main.section {
 .footer-container {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 4rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -455,7 +455,9 @@ main.section {
 .footer-left {
   flex: 1; /* slightly increased for wider left column */
   min-width: 250px;
-  max-width: 380px; /* expanded maximum width for readability */
+  max-width: 380px; 
+  gap: 2rem; 
+  padding: 0 1rem;
 }
 
 .footer-right {
@@ -463,16 +465,16 @@ main.section {
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 2rem; /* slightly reduced gap to keep within viewport */
-  flex: 3;
+  flex: 1;
 }
 
 .footer-column {
-  flex: 0 0 220px;
-  min-width: 180px;
-  max-width: 280px; /* increased from 220px to ensure last column words fit nicely */
+  flex: 1;
+  min-width: 200px;
+  max-width: 100%; 
   word-wrap: break-word;
   overflow-wrap: anywhere;
-  padding: 2 2rem;
+  padding: 0 1rem;
 }
 
 .footer-left h2 {
